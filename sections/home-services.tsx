@@ -1,0 +1,38 @@
+import { services } from "@/lib/data";
+import Image from "next/image";
+import Link from "next/link";
+
+export default function HomeServices() {
+  return (
+    <section className="bg-light">
+      <div className="container mx-auto text-primary py-16">
+        <h2 className="section_header decoration-secondary mb-16 text-center">
+          Services
+        </h2>
+        <div className="grid grid-cols-3">
+          {services.map((service, index) => (
+            <div key={index} className="flex flex-col items-center">
+              <ImageFrame src={service.image} alt={service.title} />
+              <h3 className="text-4xl mt-6">{service.title}</h3>
+              <h4 className="italic text-3xl mb-6">{service.subTitle}</h4>
+              <Link href={service.link} className="button border-primary">
+                Learn More
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ImageFrame({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div className="relative">
+      <div className="bg-primary absolute inset-0 -translate-x-2 translate-y-2" />
+      <div className="relative h-[350px] w-[350px] translate-x-2 -translate-y-2">
+        <Image src={src} alt={alt} fill className="object-cover" />
+      </div>
+    </div>
+  );
+}

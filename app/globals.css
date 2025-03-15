@@ -1,26 +1,53 @@
 @import "tailwindcss";
+/**/
+/* :root { */
+/*   --background: #ffffff; */
+/*   --foreground: #171717; */
+/* } */
+/**/
+/* @theme inline { */
+/*   --color-background: var(--background); */
+/*   --color-foreground: var(--foreground); */
+/*   --font-sans: var(--font-geist-sans); */
+/*   --font-mono: var(--font-geist-mono); */
+/* } */
+/**/
+/* @media (prefers-color-scheme: dark) { */
+/*   :root { */
+/*     --background: #0a0a0a; */
+/*     --foreground: #ededed; */
+/*   } */
+/* } */
+/**/
+/* body { */
+/*   background: var(--background); */
+/*   color: var(--foreground); */
+/*   font-family: Arial, Helvetica, sans-serif; */
+/* } */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* .cormorant { */
+/*   font-family: var(--font-cormorant-garamond); */
+/* } */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-primary: oklch(35.84% 0.0519 197);
+  --color-secondary: oklch(77.63% 0.0906 79.72);
+  --color-light: oklch(93.79% 0.0067 115.71);
+  --color-dark: oklch(23.5% 0 0);
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-cormorant-garamond), serif;
+  background: var(--color-primary);
+  color: var(--color-light);
+}
+
+.button {
+  @apply px-4 py-2 border-2 font-(family-name:--font-montserrat) text-xl font-medium uppercase active:scale-95;
+}
+
+.section_header {
+  @apply underline text-6xl font-bold;
 }
