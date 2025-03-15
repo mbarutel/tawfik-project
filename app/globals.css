@@ -44,10 +44,18 @@ body {
   color: var(--color-light);
 }
 
+.montserrat {
+  @apply font-['Montserrat'];
+}
+
 .button {
-  @apply px-4 py-2 border-2 font-(family-name:--font-montserrat) text-xl font-medium uppercase active:scale-95;
+  @apply px-4 py-2 border-2 font-['Montserrat'] text-base lg:text-xl font-medium uppercase active:scale-95 transition;
 }
 
 .section_header {
-  @apply underline text-6xl font-bold;
+  @apply underline font-bold text-4xl sm:text-5xl xl:text-6xl;
+}
+
+.container {
+  @apply container mx-auto px-3;
 }

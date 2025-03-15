@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function HomeAbout() {
   return (
     <section>
-      <div className="container mx-auto py-16 grid grid-cols-2 gap-x-12">
+      <div className="container py-16 lg:grid lg:grid-cols-2 gap-x-12">
         <AboutText />
         <AboutImage />
       </div>
@@ -16,7 +16,7 @@ function AboutText() {
   return (
     <div className="my-auto">
       <h2 className="section_header decoration-secondary">ABOUT</h2>
-      <p className="my-6">
+      <p className="mt-4 mb-6 md:mt-6 md:mb-8 text-lg xl:text-xl text-justify">
         Contrary to popular belief, Lorem Ipsum is not simply random text. It
         has roots in a piece of classical Latin literature from 45 BC, making it
         over 2000 years old. Richard McClintock, a Latin professor at
@@ -36,10 +36,10 @@ function AboutText() {
 
 function AboutImage() {
   return (
-    <div className="px-12">
+    <div className="px-12 2xl:px-22 hidden lg:block">
       <div className="relative">
         <div className="bg-secondary absolute inset-0 translate-x-3 translate-y-3" />
-        <div className="relative h-[650px]">
+        <div className="relative h-[650px] xl:h-[800px] 2xl:h-[850px]">
           <Image
             src="/about.jpg"
             alt=""
