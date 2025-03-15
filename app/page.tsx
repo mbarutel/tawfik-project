@@ -1,4 +1,10 @@
-import { HomeHeader, HomeAbout, HomeServices, HomeQuotes } from "@/sections";
+import {
+  HomeHeader,
+  HomeAbout,
+  HomeServices,
+  HomeQuotes,
+  HomeCta,
+} from "@/sections";
 
 export default function Home() {
   return (
@@ -7,6 +13,7 @@ export default function Home() {
       <HomeAbout />
       <HomeServices />
       <HomeQuotes />
+      <HomeCta />
     </>
   );
 }

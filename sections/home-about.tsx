@@ -16,7 +16,7 @@ function AboutText() {
   return (
     <div className="my-auto">
       <h2 className="section_header decoration-secondary">ABOUT</h2>
-      <p className="mt-4 mb-6 md:mt-6 md:mb-8 text-lg xl:text-xl text-justify">
+      <p className="mt-4 mb-6 md:mt-6 md:mb-8 text-justify">
         Contrary to popular belief, Lorem Ipsum is not simply random text. It
         has roots in a piece of classical Latin literature from 45 BC, making it
         over 2000 years old. Richard McClintock, a Latin professor at
