@@ -4,7 +4,7 @@ export default function HomeHeader() {
   const texts = ["Executive Coaching", "People & Culture", "Psychology-based"];
 
   return (
-    <section className="relative bg-[url('/header-bg.webp')] bg-cover bg-center">
+    <header className="relative bg-[url('/header-bg.webp')] bg-cover bg-center">
       {/* Background overlay */}
       <div className="absolute inset-0 bg-dark/50 z-0" />
 
@@ -33,6 +33,6 @@ export default function HomeHeader() {
           Learn More
         </Link>
       </div>
-    </section>
+    </header>
   );
 }

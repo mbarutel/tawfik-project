@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function HomeServices() {
   return (
     <section className="bg-light">
-      <div className="container mx-auto text-primary py-16">
+      <div className="container text-primary">
         <h2 className="section_header decoration-secondary mb-16 text-center">
           Services
         </h2>

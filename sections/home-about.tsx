@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function HomeAbout() {
   return (
     <section>
-      <div className="container py-16 lg:grid lg:grid-cols-2 gap-x-12">
+      <div className="container lg:grid lg:grid-cols-2 gap-x-12">
         <AboutText />
         <AboutImage />
       </div>

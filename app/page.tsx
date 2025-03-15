@@ -4,6 +4,7 @@ import {
   HomeServices,
   HomeQuotes,
   HomeCta,
+  HomeResources,
 } from "@/sections";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <HomeServices />
       <HomeQuotes />
       <HomeCta />
+      <HomeResources />
     </>
   );
 }
