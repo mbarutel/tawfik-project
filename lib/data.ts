@@ -1,3 +1,6 @@
+import React from "react";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+
 export const links = [
   {
     name: "Home",
@@ -96,5 +99,20 @@ export const quotes = [
       "Between stimulus and response there is a space. In that space is our power to choose our response.",
     author: "Viktor Frankl",
     title: "Psychiatrist and Holocaust Survivor",
+  },
+] as const;
+
+export const socials = [
+  {
+    icon: React.createElement(FaInstagram),
+    href: "#",
+  },
+  {
+    icon: React.createElement(FaFacebook),
+    href: "#",
+  },
+  {
+    icon: React.createElement(FaLinkedin),
+    href: "#",
   },
 ] as const;

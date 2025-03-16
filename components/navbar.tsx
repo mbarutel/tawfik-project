@@ -4,18 +4,32 @@ import { useState } from "react";
 import { links } from "@/lib/data";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-primary sticky top-0 left-0 montserrat z-[999]">
+    <nav className="bg-primary sticky top-0 left-0 z-[999]">
       <div className="container py-4 flex justify-between items-center">
         {/* Logo Placeholder */}
-        <div className="text-white text-2xl font-bold">LOGO</div>
+        <Link href="#" className="text-secondary flex items-center">
+          <div className="relative h-14 w-14">
+            <Image
+              src="/logo.svg"
+              alt="Executive Couching & Consultation Logo"
+              fill
+            />
+          </div>
+          <div className="ml-2">
+            <h5 className="text-3xl">TAWFIK</h5>
+            <h4 className="text-xl font-light -mt-1">EXECUTIVE COACHING</h4>
+          </div>
+        </Link>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex space-x-6 text-white text-lg">
+        <ul className="hidden md:flex space-x-6 text-white text-lg montserrat">
           {links.map((link, index) => (
             <li key={index}>
               <a href={link.hash} className="hover:underline">
@@ -53,7 +67,7 @@ export default function Navbar() {
               className="w-64 bg-primary h-full p-6 shadow-lg"
               onClick={(e) => e.stopPropagation()}
             >
-              <ul className="space-y-4 text-white text-lg">
+              <ul className="space-y-4 text-white text-lg montserrat">
                 {links.map((link, index) => (
                   <li key={index}>
                     <a
