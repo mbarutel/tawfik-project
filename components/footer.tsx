@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-dark relative py-14">
-      <div className="container flex justify-between">
-        <div>
+      <div className="container flex justify-center md:justify-between">
+        <div className="hidden md:block">
           <div className="text-secondary flex items-center">
             <div className="relative h-14 w-14">
               <Image
@@ -26,7 +26,7 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          <ul className="text-right">
+          <ul className="text-center md:text-right">
             {links.map((link, index) => (
               <li key={index}>
                 <Link href={link.hash} className="montserrat">
@@ -45,7 +45,7 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-        <small className="absolute bottom-2 left-1/2 -translate-x-1/2">
+        <small className="absolute text-center bottom-2 left-1/2 -translate-x-1/2">
           All rights reserved. 2025
         </small>
       </div>

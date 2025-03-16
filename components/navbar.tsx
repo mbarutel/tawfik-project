@@ -22,7 +22,7 @@ export default function Navbar() {
               fill
             />
           </div>
-          <div className="ml-2">
+          <div className="ml-2 hidden sm:block">
             <h5 className="text-3xl">TAWFIK</h5>
             <h4 className="text-xl font-light -mt-1">EXECUTIVE COACHING</h4>
           </div>
