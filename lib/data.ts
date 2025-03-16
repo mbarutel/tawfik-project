@@ -22,19 +22,28 @@ export const links = [
 
 export const services = [
   {
-    image: "/services-one.jpg",
+    image: {
+      src: "/services-one.webp",
+      alt: "Executive coaching session in Melbourne helping leaders enhance leadership skills",
+    },
     title: "Executive Coaching",
     subTitle: "Leadership Development",
     link: "#",
   },
   {
-    image: "/services-two.jpg",
+    image: {
+      src: "/services-two.webp",
+      alt: "People and culture consulting to improve organisational strategy and workplace dynamics",
+    },
     title: "People & Culture",
     subTitle: "Organisational Strategy",
     link: "#",
   },
   {
-    image: "/services-three.jpg",
+    image: {
+      src: "/services-three.webp",
+      alt: "Psychology-based coaching using behavioural insights for leadership and team success",
+    },
     title: "Psychology-based",
     subTitle: "Behavioural Insights",
     link: "#",

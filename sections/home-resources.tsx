@@ -7,8 +7,8 @@ export default function HomeResources() {
       <div className="container grid grid-cols-3">
         <div className="relative h-[450px] w-[120%] col-span-1 my-8">
           <Image
-            src="/resources.jpg"
-            alt="Test Alt"
+            src="/resources.webp"
+            alt="Executive Coaching & Consulting Services Melbourne"
             fill
             className="object-cover"
           />

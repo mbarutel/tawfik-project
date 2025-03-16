@@ -9,7 +9,7 @@ import { useCallback, useEffect, useState } from "react";
 
 export default function HomeQuotes() {
   return (
-    <section className="bg-[url('/quotes-bg.jpg')] bg-cover">
+    <section className="bg-[url('/quotes-bg.webp')] bg-cover">
       <div className="container mx-auto py-16">
         <Carousel quotes={quotes} />
       </div>
@@ -72,9 +72,8 @@ function Carousel({ quotes }: { quotes: readonly QuoteType[] }) {
         {quotes.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-              index === selectedIndex ? "bg-secondary" : "bg-light"
-            } mx-1.5 cursor-pointer`}
+            className={`w-3 h-3 rounded-full transition-colors duration-300 ${index === selectedIndex ? "bg-secondary" : "bg-light"
+              } mx-1.5 cursor-pointer`}
             type="button"
             onClick={() => scrollTo(index)}
           />

@@ -12,7 +12,7 @@ export default function HomeServices() {
         <div className="grid xl:grid-cols-3 gap-y-8">
           {services.map((service, index) => (
             <div key={index} className="flex flex-col items-center">
-              <ImageFrame src={service.image} alt={service.title} />
+              <ImageFrame src={service.image.src} alt={service.image.alt} />
               <h3 className="text-4xl mt-3 xl:mt-6">{service.title}</h3>
               <h4 className="italic text-3xl mb-3 xl:mb-6">
                 {service.subTitle}

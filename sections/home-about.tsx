@@ -41,8 +41,8 @@ function AboutImage() {
         <div className="bg-secondary absolute inset-0 translate-x-3 translate-y-3" />
         <div className="relative h-[650px] xl:h-[800px] 2xl:h-[850px]">
           <Image
-            src="/about.jpg"
-            alt=""
+            src="/about.webp"
+            alt="Executive coaching session in Melbourne fostering leadership growth and business success"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
