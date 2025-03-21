@@ -1,6 +1,6 @@
 import { links, socials } from "@/lib/data";
-import Image from "next/image";
 import Link from "next/link";
+import Logo from "./logo";
 
 export default function Footer() {
   return (
@@ -8,17 +8,7 @@ export default function Footer() {
       <div className="container flex justify-center md:justify-between">
         <div className="hidden md:block">
           <div className="text-secondary flex items-center">
-            <div className="relative h-14 w-14">
-              <Image
-                src="/logo.svg"
-                alt="Executive Couching & Consultation Logo"
-                fill
-              />
-            </div>
-            <div className="ml-2">
-              <h5 className="text-3xl">TAWFIK</h5>
-              <h4 className="text-xl font-light -mt-1">EXECUTIVE COACHING</h4>
-            </div>
+            <Logo />
           </div>
           <p className="mt-4 leading-tight max-w-[60ch]">
             It is a long established fact that a reader will be distracted by

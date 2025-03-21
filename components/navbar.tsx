@@ -4,8 +4,8 @@ import { useState } from "react";
 import { links } from "@/lib/data";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
+import Logo from "./logo";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,19 +15,7 @@ export default function Navbar() {
       <div className="container py-4 flex justify-between items-center">
         {/* Logo Placeholder */}
         <Link href="#" className="text-secondary flex items-center">
-          <div className="relative h-8 w-8 sm:h-10 sm:w-10 lg:h-14 lg:w-14">
-            <Image
-              src="/logo.svg"
-              alt="Executive Couching & Consultation Logo"
-              fill
-            />
-          </div>
-          <div className="ml-2 hidden sm:block">
-            <h5 className="text-xl sm:text-2xl lg:text-3xl">TAWFIK</h5>
-            <h4 className="text-base sm:text-lg lg:text-xl font-light -mt-2 lg:-mt-1">
-              EXECUTIVE COACHING
-            </h4>
-          </div>
+          <Logo />
         </Link>
 
         {/* Desktop Navigation */}
