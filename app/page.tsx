@@ -1,3 +1,5 @@
+import { Blog } from "@/contentful/controllers/blog";
+import parserBlogEntry from "@/contentful/utils/parser-blog-entry";
 import {
   HomeHeader,
   HomeAbout,
@@ -6,8 +8,27 @@ import {
   HomeCta,
   HomeResources,
 } from "@/sections";
+import { draftMode } from "next/headers";
 
-export default function Home() {
+export async function generateStaticParams() {
+  const blogInstance = new Blog({
+    preview: false,
+    parser: parserBlogEntry,
+  });
+
+  return await blogInstance.getLatestBlog();
+}
+
+export default async function Home() {
+  const draft = await draftMode();
+
+  const blogInstance = new Blog({
+    preview: draft.isEnabled,
+    parser: parserBlogEntry,
+  });
+
+  const blog = await blogInstance.getLatestBlog();
+
   return (
     <>
       <HomeHeader />
@@ -15,7 +36,7 @@ export default function Home() {
       <HomeServices />
       <HomeQuotes />
       <HomeCta />
-      <HomeResources />
+      <HomeResources blog={blog} />
     </>
   );
 }

@@ -14,7 +14,7 @@ export default function HomeHeader() {
           {texts.map((text, index) => (
             <h3
               key={index}
-              className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-center font-thin italic"
+              className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-center font-thin italic opacity-80"
             >
               {text}
             </h3>

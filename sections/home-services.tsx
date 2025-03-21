@@ -5,22 +5,27 @@ import Link from "next/link";
 export default function HomeServices() {
   return (
     <section className="bg-light">
-      <div className="container text-primary">
-        <h2 className="section_header decoration-secondary mb-8 xl:mb-16 text-center">
+      <div className="container">
+        <h2 className="section_header decoration-secondary mb-8 xl:mb-16 text-center text-primary">
           Services
         </h2>
         <div className="grid xl:grid-cols-3 gap-y-8 gap-x-3">
           {services.map((service, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-4 bg-dark/10 2xl:bg-dark/0 rounded-md w-[min(100%,40rem)] mx-auto"
+              className="flex flex-col items-center p-4 bg-primary 2xl:bg-primary/0 rounded-md w-[min(100%,40rem)] mx-auto"
             >
               <ImageFrame src={service.image.src} alt={service.image.alt} />
-              <h3 className="text-4xl mt-3 xl:mt-6">{service.title}</h3>
-              <h4 className="italic text-3xl mb-3 xl:mb-6">
+              <h3 className="text-4xl mt-3 xl:mt-6 text-light 2xl:text-primary">
+                {service.title}
+              </h3>
+              <h4 className="italic text-3xl mb-3 xl:mb-6 text-light 2xl:text-primary">
                 {service.subTitle}
               </h4>
-              <Link href={service.link} className="button border-primary">
+              <Link
+                href={service.link}
+                className="button border-secondary 2xl:border-primary text-light 2xl:text-primary"
+              >
                 Learn More
               </Link>
             </div>
@@ -40,7 +45,7 @@ function ImageFrame({ src, alt }: { src: string; alt: string }) {
           src={src}
           alt={alt}
           fill
-          className="object-cover rounded-md xl:rounded-none"
+          className="object-cover rounded-md 2xl:rounded-none"
         />
       </div>
     </div>
