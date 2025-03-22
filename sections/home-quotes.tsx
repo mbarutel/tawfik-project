@@ -45,7 +45,9 @@ function Carousel({ quotes }: { quotes: readonly QuoteType[] }) {
 
   return (
     <>
-      <div className="mx-auto my-auto bg-primary/80 rounded-md">
+      <div className="relative mx-auto my-auto bg-primary/80 rounded-md">
+        <RiDoubleQuotesL className="absolute text-6xl top-10 left-10 opacity-70" />
+        <RiDoubleQuotesR className="absolute text-6xl bottom-10 right-10 opacity-70" />
         <div className="overflow-hidden" ref={viewportRef}>
           <div className="flex">
             {quotes.map((_, index) => (
@@ -53,8 +55,6 @@ function Carousel({ quotes }: { quotes: readonly QuoteType[] }) {
                 key={index}
                 className="relative flex-[0_0_100%] min-w-0 p-14 h-[350px] lg:h-[450px] flex flex-col justify-center rounded-md cursor-grab active:cursor-grabbing"
               >
-                <RiDoubleQuotesL className="absolute text-6xl top-10 left-10 opacity-70" />
-                <RiDoubleQuotesR className="absolute text-6xl bottom-10 right-10 opacity-70" />
                 <h3 className="text-xl md:text-3xl text-center">
                   {quotes[index].quote}
                 </h3>

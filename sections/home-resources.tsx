@@ -14,13 +14,15 @@ export default function HomeResources() {
               className="object-cover"
             />
           </div>
-          <div className="bg-light text-primary text-center xl:text-right px-6 flex-grow flex flex-col items-center xl:items-end justify-center col-span-2 py-8 xl:py-4">
-            <h2 className="section_header italic decoration-light">
-              Recommended Reading
+          <div className="bg-light/80 text-primary text-center xl:text-right px-12 flex-grow flex flex-col items-center xl:items-end justify-center col-span-2 py-8 xl:py-4">
+            <h2 className="text-4xl italic decoration-light">
+              RECOMMENDED READING
             </h2>
-            <p className="w-[min(100%,60ch)] my-5 xl:my-8">
-              Contrary to popular belief, Lorem Ipsum popular belief popular
-              belief Contrary to popular belief, Lorem Ipsum popular belief{" "}
+            <p className="w-[min(100%,60ch)] my-5">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
             </p>
             <Link href="/blogs" className="button border-primary">
               Learn More
