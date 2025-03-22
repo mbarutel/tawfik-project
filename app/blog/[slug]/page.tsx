@@ -5,7 +5,21 @@ import { formatDate } from "@/lib";
 import { draftMode } from "next/headers";
 import { notFound } from "next/navigation";
 
-export default async function page({ params }: { params: { slug: string } }) {
+export async function generateStaticParams() {
+  const blogInstance = new Blog({
+    preview: false,
+    parser: parserBlogEntry,
+  });
+
+  return await blogInstance.getBlogs();
+}
+
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
   const draft = await draftMode();
 
   const blogInstance = new Blog({
@@ -13,7 +27,7 @@ export default async function page({ params }: { params: { slug: string } }) {
     parser: parserBlogEntry,
   });
 
-  const blog = await blogInstance.getBlog(params.slug);
+  const blog = await blogInstance.getBlog(slug);
 
   if (!blog) {
     return notFound();
