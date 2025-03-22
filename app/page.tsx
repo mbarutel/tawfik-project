@@ -36,7 +36,7 @@ export default async function Home() {
       <HomeServices />
       <HomeQuotes />
       <HomeCta />
-      <HomeResources blog={blog} />
+      <HomeResources />
     </>
   );
 }
