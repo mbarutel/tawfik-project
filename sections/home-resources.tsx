@@ -24,7 +24,7 @@ export default function HomeResources() {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-            <Link href="/blogs" className="button border-primary">
+            <Link href="/blog" className="button border-primary">
               Learn More
             </Link>
           </div>

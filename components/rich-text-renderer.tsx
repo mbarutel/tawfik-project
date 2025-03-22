@@ -3,7 +3,7 @@ import { Block, BLOCKS, Inline, MARKS } from "@contentful/rich-text-types";
 import { Document as RichTextDocument } from "@contentful/rich-text-types";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-export default function RichTextRenderer({
+export default function RichText({
   document,
 }: {
   document: RichTextDocument | null;
@@ -47,25 +47,39 @@ export default function RichTextRenderer({
         <h5 className="text-lg font-medium mt-5 mb-2">{children}</h5>
       ),
       [BLOCKS.HEADING_6]: (_node: Block | Inline, children: ReactNode) => (
-        <h6 className="text-base font-medium mt-4 mb-2 text-gray-700">
-          {children}
-        </h6>
+        <h6 className="text-base font-medium mt-4 mb-2">{children}</h6>
       ),
       [BLOCKS.PARAGRAPH]: (_node: Block | Inline, children: ReactNode) => (
-        <p className="text-base leading-relaxed mb-6 text-gray-800">
-          {children}
-        </p>
+        <p className="text-base leading-relaxed mb-6">{children}</p>
       ),
       [BLOCKS.UL_LIST]: (_node: Block | Inline, children: ReactNode) => (
-        <ul className="list-disc list-inside mb-6">{children}</ul>
+        <ul className="list-disc list-outside pl-6 mb-6">{children}</ul>
       ),
       [BLOCKS.LIST_ITEM]: (_node: Block | Inline, children: ReactNode) => (
-        <li className="mb-2">{children}</li>
+        <li className="first:-mt-0 -mt-6">{children}</li>
       ),
       [BLOCKS.QUOTE]: (_node: Block | Inline, children: ReactNode) => (
-        <blockquote className="border-l-4 border-gray-300 pl-4 italic text-gray-600 bg-gray-50 rounded-md my-6 py-3">
+        <blockquote className="border-l-4 border-gray-300 pl-4 italic my-6 py-3">
           {children}
         </blockquote>
+      ),
+      [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
+        const { file, description } = node.data.target.fields;
+        const imageUrl = file?.url?.startsWith("//")
+          ? `https:${file.url}`
+          : file?.url;
+        const alt = description || "Article image";
+
+        return (
+          <img
+            src={imageUrl}
+            alt={alt}
+            className="w-full h-auto rounded-md my-6 shadow-sm"
+          />
+        );
+      },
+      [BLOCKS.HR]: () => (
+        <hr className="my-10 border-t border-gray-300 opacity-50" />
       ),
     },
   };
