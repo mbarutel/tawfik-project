@@ -51,16 +51,14 @@ function Carousel({ quotes }: { quotes: readonly QuoteType[] }) {
             {quotes.map((_, index) => (
               <div
                 key={index}
-                className="flex-[0_0_100%] min-w-0 p-14 h-[350px] lg:h-[450px] flex flex-col justify-center rounded-md cursor-grab active:cursor-grabbing"
+                className="relative flex-[0_0_100%] min-w-0 p-14 h-[350px] lg:h-[450px] flex flex-col justify-center rounded-md cursor-grab active:cursor-grabbing"
               >
-                <div className="flex flex-wrap gap-2 justify-center">
-                  <h3 className="text-xl md:text-3xl text-center">
-                    <RiDoubleQuotesL className="inline-flex mr-1" />
-                    {quotes[index].quote}
-                    <RiDoubleQuotesR className="inline-flex ml-1" />
-                  </h3>
-                </div>
-                <p className="text-base md:text-lg text-right mt-4">
+                <RiDoubleQuotesL className="absolute text-6xl top-10 left-10 opacity-70" />
+                <RiDoubleQuotesR className="absolute text-6xl bottom-10 right-10 opacity-70" />
+                <h3 className="text-xl md:text-3xl text-center">
+                  {quotes[index].quote}
+                </h3>
+                <p className="text-base md:text-lg mt-4 text-center italic">
                   {quotes[index].author}, {quotes[index].title}
                 </p>
               </div>
@@ -72,8 +70,9 @@ function Carousel({ quotes }: { quotes: readonly QuoteType[] }) {
         {quotes.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full transition-colors duration-300 ${index === selectedIndex ? "bg-secondary" : "bg-light"
-              } mx-1.5 cursor-pointer`}
+            className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+              index === selectedIndex ? "bg-secondary" : "bg-light"
+            } mx-1.5 cursor-pointer`}
             type="button"
             onClick={() => scrollTo(index)}
           />

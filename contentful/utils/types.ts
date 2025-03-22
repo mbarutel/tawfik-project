@@ -7,9 +7,9 @@ export type BlogEntry = Entry<TypeBlogSkeleton, undefined, string>;
 export type BlogType = {
   slug: string;
   title: string;
-  createdDate: Date;
   updatedDate: Date;
   poster: AssetType;
+  description: string;
   body: Document;
 };
 

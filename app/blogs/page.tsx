@@ -1,12 +1,46 @@
+import { Blog } from "@/contentful/controllers/blog";
+import parserBlogEntry from "@/contentful/utils/parser-blog-entry";
 import { BlogType } from "@/contentful/utils/types";
+import { formatDate } from "@/lib";
+import Image from "next/image";
+import Link from "next/link";
+import { Fragment } from "react";
+import { BsArrowRight } from "react-icons/bs";
 
-export default function page() {
+export async function generateStaticParams() {
+  const blogInstance = new Blog({
+    preview: false,
+    parser: parserBlogEntry,
+  });
+
+  return await blogInstance.getBlogs();
+}
+
+export default async function page() {
+  const blogInstance = new Blog({
+    preview: false,
+    parser: parserBlogEntry,
+  });
+
+  const blogs = await blogInstance.getBlogs();
+
   return (
     <>
       <section>
         <div className="container">
-          <h2 className="section_header decoration-primary">BLOG</h2>
-          <h3>books, podcasts, blog posts & everything else</h3>
+          <h2 className="section_header decoration-primary text-center">
+            BLOG
+          </h2>
+          <h3 className="text-3xl text-center mb-12">
+            books, podcasts, blog posts & everything else
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-12 gap-x-16 lg:gap-x-22 2xl:gap-x-32">
+            {blogs.map((blog) => (
+              <Fragment key={blog.slug}>
+                <BlogCard blog={blog} />
+              </Fragment>
+            ))}
+          </div>
         </div>
       </section>
     </>
@@ -15,8 +49,20 @@ export default function page() {
 
 function BlogCard({ blog }: { blog: BlogType }) {
   return (
-    <div>
-      <h1>{blog.title}</h1>
+    <div className="flex flex-col">
+      <div className="relative h-[350px] w-full">
+        <Image src={blog.poster.src} alt={blog.poster.alt} fill />
+      </div>
+      <p className="my-4 text-2xl">{formatDate(blog.updatedDate)}</p>
+      <h2 className="text-4xl font-bold mb-3">{blog.title}</h2>
+      <p>{blog.description}</p>
+      <Link
+        href={`/blog/${blog.slug}`}
+        className="text-secondary text-2xl mt-6"
+      >
+        Read Article
+        <BsArrowRight className="inline-flex ml-3" />
+      </Link>
     </div>
   );
 }

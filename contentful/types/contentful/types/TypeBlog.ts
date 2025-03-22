@@ -4,6 +4,7 @@ export interface TypeBlogFields {
     title: EntryFieldTypes.Symbol;
     slug: EntryFieldTypes.Symbol;
     poster: EntryFieldTypes.AssetLink;
+    description: EntryFieldTypes.Text;
     body: EntryFieldTypes.RichText;
 }
 
