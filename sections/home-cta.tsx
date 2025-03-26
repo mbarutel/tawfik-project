@@ -4,7 +4,7 @@ import { InlineWidget } from "react-calendly";
 
 export default function HomeCta() {
   return (
-    <section className="bg-light">
+    <section id="contact" className="bg-light">
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-12 items-center px-6 md:px-12">
         <div className="text-center lg:text-left text-primary">
           <h2 className="section_header decoration-light">

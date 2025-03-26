@@ -52,9 +52,11 @@ function BlogCard({ blog }: { blog: BlogType }) {
       <div className="relative h-[350px] w-full">
         <Image src={blog.poster.src} alt={blog.poster.alt} fill />
       </div>
-      <p className="my-4 text-2xl">{formatDate(blog.updatedDate)}</p>
+      <p className="my-4 text-2xl text-justify">
+        {formatDate(blog.updatedDate)}
+      </p>
       <h2 className="text-4xl font-bold mb-3">{blog.title}</h2>
-      <p>{blog.description}</p>
+      <p className="text-justify">{blog.description}</p>
       <Link
         href={`/blog/${blog.slug}`}
         className="text-secondary text-2xl mt-6"

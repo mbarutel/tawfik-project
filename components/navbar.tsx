@@ -12,19 +12,20 @@ export default function Navbar() {
 
   return (
     <nav className="bg-primary sticky top-0 left-0 z-[999]">
-      <div className="container py-4 flex justify-between items-center">
+      <div className="container flex justify-between items-center">
         {/* Logo Placeholder */}
-        <Link href="#" className="text-secondary flex items-center">
+        <Link href="/" className="text-secondary flex items-center py-2">
           <Logo />
         </Link>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex space-x-6 text-white text-lg montserrat">
+        <ul className="hidden md:flex text-white text-lg montserrat">
           {links.map((link, index) => (
-            <li key={index}>
-              <a href={link.hash} className="hover:underline">
-                {link.name}
-              </a>
+            <li
+              key={index}
+              className="hover:bg-secondary hover:text-primary py-3 px-6 transition active:scale-95"
+            >
+              <a href={link.hash}>{link.name}</a>
             </li>
           ))}
         </ul>

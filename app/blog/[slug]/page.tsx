@@ -34,10 +34,10 @@ export default async function Page({
   }
 
   return (
-    <article>
+    <article className="mb-16">
       <div className="max-w-3xl mx-auto px-4 text-center">
-        <p>{formatDate(blog.updatedDate)}</p>
-        <h1 className="text-6xl">{blog.title}</h1>
+        <p className="font-light">{formatDate(blog.updatedDate)}</p>
+        <h1 className="text-6xl xl:text-8xl font-bold my-16">{blog.title}</h1>
       </div>
       <RichTextRenderer document={blog.body} />
     </article>

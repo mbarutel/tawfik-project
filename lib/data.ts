@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 export const links = [
   {
     name: "Home",
-    hash: "#home",
+    hash: "/",
   },
   {
     name: "About",

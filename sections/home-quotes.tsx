@@ -46,8 +46,8 @@ function Carousel({ quotes }: { quotes: readonly QuoteType[] }) {
   return (
     <>
       <div className="relative mx-auto my-auto bg-primary/80 rounded-md">
-        <RiDoubleQuotesL className="absolute text-6xl top-10 left-10 opacity-70" />
-        <RiDoubleQuotesR className="absolute text-6xl bottom-10 right-10 opacity-70" />
+        <RiDoubleQuotesL className="absolute text-4xl xl:text-6xl top-10 left-10 opacity-70" />
+        <RiDoubleQuotesR className="absolute text-4xl xl:text-6xl bottom-10 right-10 opacity-70" />
         <div className="overflow-hidden" ref={viewportRef}>
           <div className="flex">
             {quotes.map((_, index) => (
@@ -70,9 +70,8 @@ function Carousel({ quotes }: { quotes: readonly QuoteType[] }) {
         {quotes.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-              index === selectedIndex ? "bg-secondary" : "bg-light"
-            } mx-1.5 cursor-pointer`}
+            className={`w-3 h-3 rounded-full transition-colors duration-300 ${index === selectedIndex ? "bg-secondary" : "bg-light"
+              } mx-1.5 cursor-pointer`}
             type="button"
             onClick={() => scrollTo(index)}
           />

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function HomeAbout() {
   return (
-    <section>
+    <section id="about">
       <div className="container lg:grid lg:grid-cols-2 gap-x-12">
         <AboutText />
         <AboutImage />

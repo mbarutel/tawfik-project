@@ -4,10 +4,10 @@ import Link from "next/link";
 
 export default function HomeServices() {
   return (
-    <section className="bg-light">
+    <section id="services" className="bg-light">
       <div className="container">
         <h2 className="section_header decoration-secondary mb-8 xl:mb-16 text-center text-primary">
-          Services
+          SERVICES
         </h2>
         <div className="grid xl:grid-cols-3 gap-y-8 gap-x-3">
           {services.map((service, index) => (
@@ -24,7 +24,7 @@ export default function HomeServices() {
               </h4>
               <Link
                 href={service.link}
-                className="button border-secondary 2xl:border-primary text-light 2xl:text-primary"
+                className="button border-secondary text-secondary 2xl:border-primary 2xl:text-primary"
               >
                 Learn More
               </Link>
