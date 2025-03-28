@@ -29,8 +29,8 @@ export default function HomeHeader() {
         <h2 className="text-xl sm:text-2xl xl:text-4xl text-center">
           No one who loves pain itself
         </h2>
-        <Link href="#" className="button mb-auto mx-auto border-light mt-8">
-          Learn More
+        <Link href="#services" className="button mb-auto mx-auto border-light mt-8">
+          Our Services
         </Link>
       </div>
     </header>

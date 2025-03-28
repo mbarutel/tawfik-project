@@ -22,12 +22,6 @@ export default function HomeServices() {
               <h4 className="italic text-3xl mb-3 xl:mb-6 text-light 2xl:text-primary">
                 {service.subTitle}
               </h4>
-              <Link
-                href={service.link}
-                className="button border-secondary text-secondary 2xl:border-primary 2xl:text-primary"
-              >
-                Learn More
-              </Link>
             </div>
           ))}
         </div>
@@ -51,3 +45,10 @@ function ImageFrame({ src, alt }: { src: string; alt: string }) {
     </div>
   );
 }
+
+// <Link
+//   href={service.link}
+//   className="button border-secondary text-secondary 2xl:border-primary 2xl:text-primary"
+// >
+//   Learn More
+// </Link>

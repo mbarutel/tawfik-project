@@ -49,9 +49,9 @@ export default async function page() {
 function BlogCard({ blog }: { blog: BlogType }) {
   return (
     <div className="flex flex-col">
-      <div className="relative h-[350px] w-full">
+      <Link href={`/blog/${blog.slug}`} className="relative h-[350px] w-full">
         <Image src={blog.poster.src} alt={blog.poster.alt} fill />
-      </div>
+      </Link>
       <p className="my-4 text-2xl text-justify">
         {formatDate(blog.updatedDate)}
       </p>
@@ -59,10 +59,10 @@ function BlogCard({ blog }: { blog: BlogType }) {
       <p className="text-justify">{blog.description}</p>
       <Link
         href={`/blog/${blog.slug}`}
-        className="text-secondary text-2xl mt-6"
+        className="text-secondary text-2xl mt-6 group"
       >
         Read Article
-        <BsArrowRight className="inline-flex ml-3" />
+        <BsArrowRight className="inline-flex ml-3 group-hover:translate-x-2 transition" />
       </Link>
     </div>
   );
