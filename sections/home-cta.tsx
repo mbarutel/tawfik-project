@@ -1,6 +1,8 @@
 "use client";
 import { BsArrowDown, BsArrowRight } from "react-icons/bs";
 import { InlineWidget } from "react-calendly";
+import { BiSolidChevronRightSquare } from "react-icons/bi";
+import Link from "next/link";
 
 export default function HomeCta() {
   return (
@@ -18,10 +20,25 @@ export default function HomeCta() {
             classical Latin literature from 45 BC, making it over 2000 years
             old.
           </p>
-          <p className="montserrat text-base lg:text-xl">
-            Book Now
-            <BsArrowRight className="hidden lg:inline-flex ml-2" />
-            <BsArrowDown className="lg:hidden inline-flex ml-2" />
+          <p className="flex items-center gap-1">
+            <BiSolidChevronRightSquare className="inline-flex text-secondary" />
+            Mobile:
+            <Link
+              href="tel:04028050322"
+              className="hover:underline hover:text-secondary transition"
+            >
+              04028050322
+            </Link>
+          </p>
+          <p className="flex items-center gap-1">
+            <BiSolidChevronRightSquare className="inline-flex text-secondary" />
+            Email:
+            <Link
+              href="mailto:contact@email.com"
+              className="hover:underline hover:text-secondary transition"
+            >
+              contact@email.com
+            </Link>
           </p>
         </div>
         <div className="py-8 h-[550px] lg:h-[450px]">
@@ -34,3 +51,9 @@ export default function HomeCta() {
     </section>
   );
 }
+
+// <p className="montserrat text-base lg:text-xl">
+//   Book Now
+//   <BsArrowRight className="hidden lg:inline-flex ml-2" />
+//   <BsArrowDown className="lg:hidden inline-flex ml-2" />
+// </p>

@@ -26,8 +26,8 @@ export const services = [
       src: "/services-one.webp",
       alt: "Executive coaching session in Melbourne helping leaders enhance leadership skills",
     },
-    title: "Executive Coaching",
-    subTitle: "Leadership Development",
+    title: "Executive",
+    subTitle: "Coaching & Leadership",
     link: "#",
   },
   {
@@ -36,7 +36,7 @@ export const services = [
       alt: "People and culture consulting to improve organisational strategy and workplace dynamics",
     },
     title: "People & Culture",
-    subTitle: "Organisational Strategy",
+    subTitle: "Consulting",
     link: "#",
   },
   {
@@ -45,7 +45,7 @@ export const services = [
       alt: "Psychology-based coaching using behavioural insights for leadership and team success",
     },
     title: "Psychology-based",
-    subTitle: "Behavioural Insights",
+    subTitle: "Coaching",
     link: "#",
   },
 ] as const;
@@ -80,48 +80,19 @@ export const quotes = [
     author: "Carl Rogers",
     title: "Humanistic Psychologist",
   },
-  {
-    quote:
-      "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.",
-    author: "Buddha",
-    title: "Spiritual Teacher and Psychologist of the Mind",
-  },
-  {
-    quote:
-      "The greatest discovery of my generation is that a human being can alter his life by altering his attitudes of mind.",
-    author: "William James",
-    title: "Father of American Psychology",
-  },
-  {
-    quote: "A person’s a person, no matter how small.",
-    author: "Dr. Seuss",
-    title: "Children's Author and Psychological Thinker",
-  },
-  {
-    quote:
-      "Man is not worried by real problems so much as by his imagined anxieties about real problems.",
-    author: "Epictetus",
-    title: "Stoic Philosopher and Psychological Thinker",
-  },
-  {
-    quote:
-      "Between stimulus and response there is a space. In that space is our power to choose our response.",
-    author: "Viktor Frankl",
-    title: "Psychiatrist and Holocaust Survivor",
-  },
 ] as const;
 
 export const socials = [
   {
     icon: React.createElement(FaInstagram),
-    href: "#",
+    href: "https://www.instagram.com/",
   },
   {
     icon: React.createElement(FaFacebook),
-    href: "#",
+    href: "https://www.facebook.com/",
   },
   {
     icon: React.createElement(FaLinkedin),
-    href: "#",
+    href: "https://www.linkedin.com/",
   },
 ] as const;

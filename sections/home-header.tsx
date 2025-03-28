@@ -10,11 +10,11 @@ export default function HomeHeader() {
 
       {/* Content - Ensure it's above the overlay */}
       <div className="container relative h-screen md:h-[1000px] flex flex-col z-10">
-        <div className="flex justify-center opacity-80 gap-5 sm:gap-7 md:gap-12 lg:gap-16 xl:gap-22 2xl:gap-24 mt-8">
+        <div className="flex justify-center opacity-80 gap-5 sm:gap-7 md:gap-12 lg:gap-18 xl:gap-24 2xl:gap-28 mt-8">
           {texts.map((text, index) => (
             <h3
               key={index}
-              className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-center font-thin italic opacity-80"
+              className="text-xl sm:text-2xl lg:text-3xl text-center font-thin italic opacity-80"
             >
               {text}
             </h3>
@@ -29,7 +29,10 @@ export default function HomeHeader() {
         <h2 className="text-xl sm:text-2xl xl:text-4xl text-center">
           No one who loves pain itself
         </h2>
-        <Link href="#services" className="button mb-auto mx-auto border-light mt-8">
+        <Link
+          href="#services"
+          className="button mb-auto mx-auto border-light mt-8"
+        >
           Our Services
         </Link>
       </div>

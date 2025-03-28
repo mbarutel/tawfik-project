@@ -23,7 +23,7 @@ export default function Navbar() {
           {links.map((link, index) => (
             <li
               key={index}
-              className="hover:bg-secondary hover:text-primary py-3 px-6 transition active:scale-95"
+              className="hover:text-secondary py-3 px-6 transition active:scale-95"
             >
               <a href={link.hash}>{link.name}</a>
             </li>

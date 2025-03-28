@@ -27,8 +27,9 @@ function AboutText() {
         45 BC, making it over 2000 years old. Richard McClintock, a Latin
         professor at Hampden-Sydney College.
       </p>
+      <br />
       <p className="text-justify mb-6 md:mb-8">
-        Book your time for a free kick-off session to learn more about how it works and what's in it for YOU!
+        Book your time for a free kick-off session to learn more.
       </p>
       <Link href="#contact" className="button border-secondary text-secondary">
         Book Now
@@ -41,8 +42,8 @@ function AboutImage() {
   return (
     <div className="px-12 2xl:px-22 hidden lg:block">
       <div className="relative">
-        <div className="bg-secondary absolute inset-0 translate-x-3 translate-y-3" />
-        <div className="relative h-[650px] xl:h-[800px] 2xl:h-[850px]">
+        <div className="bg-secondary absolute bottom-0 right-0 translate-x-3 translate-y-3 w-[80%] h-[90%]" />
+        <div className="relative h-[650px] lg:h-[550px] xl:h-[600px]">
           <Image
             src="/about.webp"
             alt="Executive coaching session in Melbourne fostering leadership growth and business success"
