@@ -14,7 +14,7 @@ export default function HomeResources() {
               className="object-cover"
             />
           </div>
-          <div className="bg-light text-primary text-center xl:text-left px-32 flex-grow flex flex-col items-center xl:items-start justify-center col-span-2 py-8 xl:py-4">
+          <div className="bg-light text-primary text-center xl:text-left px-6 xl:px-32 flex-grow flex flex-col items-center xl:items-start justify-center col-span-2 py-8 xl:py-4">
             <h2 className="text-4xl italic decoration-light">
               RECOMMENDED READING
             </h2>

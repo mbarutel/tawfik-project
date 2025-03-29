@@ -28,6 +28,7 @@ export const services = [
     },
     title: "Executive",
     subTitle: "Coaching & Leadership",
+    text: "Mi lectus fermentum id platea nullam velit elementum porttitor vestibulum. A, porta.",
     link: "#",
   },
   {
@@ -37,6 +38,7 @@ export const services = [
     },
     title: "People & Culture",
     subTitle: "Consulting",
+    text: "Pretium, est nibh, est nisl maximus morbi habitasse ac consectetur. Neque vitae eget.",
     link: "#",
   },
   {
@@ -46,6 +48,7 @@ export const services = [
     },
     title: "Psychology-based",
     subTitle: "Coaching",
+    text: "Et ac imperdiet, purus pellentesque eget rutrum, in sem hac. Consequat dignissim.",
     link: "#",
   },
 ] as const;

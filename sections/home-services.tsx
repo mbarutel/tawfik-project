@@ -1,6 +1,5 @@
 import { services } from "@/lib/data";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function HomeServices() {
   return (
@@ -19,9 +18,10 @@ export default function HomeServices() {
               <h3 className="text-4xl mt-6 xl:mt-10 text-light xl:text-primary">
                 {service.title}
               </h3>
-              <h4 className="italic text-3xl mb-3 xl:mb-6 text-light xl:text-primary">
+              <h4 className="italic text-3xl mb-3 text-light xl:text-primary">
                 {service.subTitle}
               </h4>
+              <p className="xl:text-primary text-justify">{service.text}</p>
             </div>
           ))}
         </div>
