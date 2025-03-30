@@ -21,7 +21,9 @@ export default function HomeServices() {
               <h4 className="italic text-3xl mb-3 text-light xl:text-primary">
                 {service.subTitle}
               </h4>
-              <p className="xl:text-primary text-justify">{service.text}</p>
+              <p className="xl:text-primary text-center xl:text-justify">
+                {service.text}
+              </p>
             </div>
           ))}
         </div>

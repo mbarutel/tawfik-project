@@ -41,7 +41,7 @@ export default function HomeCta() {
             </Link>
           </p>
         </div>
-        <div className="py-8 h-[550px] lg:h-[450px]">
+        <div className="py-8 h-[550px]">
           <InlineWidget
             url="https://calendly.com/edubas128"
             styles={{ height: "100%", width: "100%", borderRadius: "10px" }}

@@ -55,7 +55,11 @@ function BlogCard({ blog }: { blog: BlogType }) {
       <p className="my-4 text-2xl text-justify">
         {formatDate(blog.updatedDate)}
       </p>
-      <h2 className="text-4xl font-bold mb-3">{blog.title}</h2>
+      <Link href={`/blog/${blog.slug}`}>
+        <h2 className="text-4xl font-bold mb-3 hover:underline">
+          {blog.title}
+        </h2>
+      </Link>
       <p className="text-justify">{blog.description}</p>
       <Link
         href={`/blog/${blog.slug}`}
