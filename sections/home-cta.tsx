@@ -1,5 +1,4 @@
 "use client";
-import { BsArrowDown, BsArrowRight } from "react-icons/bs";
 import { InlineWidget } from "react-calendly";
 import { BiSolidChevronRightSquare } from "react-icons/bi";
 import Link from "next/link";
@@ -20,7 +19,7 @@ export default function HomeCta() {
             classical Latin literature from 45 BC, making it over 2000 years
             old.
           </p>
-          <p className="flex items-center gap-1">
+          <p className="flex items-center gap-1 justify-center lg:justify-start">
             <BiSolidChevronRightSquare className="inline-flex text-secondary" />
             Mobile:
             <Link
@@ -30,7 +29,7 @@ export default function HomeCta() {
               04028050322
             </Link>
           </p>
-          <p className="flex items-center gap-1">
+          <p className="flex items-center gap-1 justify-center lg:justify-start">
             <BiSolidChevronRightSquare className="inline-flex text-secondary" />
             Email:
             <Link
@@ -41,10 +40,10 @@ export default function HomeCta() {
             </Link>
           </p>
         </div>
-        <div className="py-8 h-[550px]">
+        <div className="h-[600px]">
           <InlineWidget
-            url="https://calendly.com/edubas128"
-            styles={{ height: "100%", width: "100%", borderRadius: "10px" }}
+            url="https://calendly.com/edubas128/30min"
+            styles={{ height: "600px", width: "100%" }}
           />
         </div>
       </div>

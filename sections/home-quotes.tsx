@@ -53,12 +53,12 @@ function Carousel({ quotes }: { quotes: readonly QuoteType[] }) {
             {quotes.map((_, index) => (
               <div
                 key={index}
-                className="relative flex-[0_0_100%] min-w-0 p-14 h-[350px] lg:h-[450px] flex flex-col justify-center rounded-md cursor-grab active:cursor-grabbing"
+                className="relative flex-[0_0_100%] min-w-0 p-4 md:p-14 h-[350px] lg:h-[450px] flex flex-col justify-center rounded-md cursor-grab active:cursor-grabbing"
               >
                 <h3 className="text-xl md:text-3xl text-center">
                   {quotes[index].quote}
                 </h3>
-                <p className="text-base md:text-lg mt-4 text-center italic">
+                <p className="text-sm md:text-lg mt-2 lg:mt-4 text-center italic">
                   {quotes[index].author}, {quotes[index].title}
                 </p>
               </div>

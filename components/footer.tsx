@@ -46,7 +46,7 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-        <p className="absolute font-light opacity-80 text-center bottom-2 left-1/2 -translate-x-1/2">
+        <p className="absolute text-sm md:text-base font-light opacity-80 text-center bottom-2 left-1/2 -translate-x-1/2">
           All rights reserved. 2025
         </p>
       </div>
