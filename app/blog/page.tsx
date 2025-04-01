@@ -50,7 +50,12 @@ function BlogCard({ blog }: { blog: BlogType }) {
   return (
     <div className="flex flex-col">
       <Link href={`/blog/${blog.slug}`} className="relative h-[350px] w-full">
-        <Image src={blog.poster.src} alt={blog.poster.alt} fill />
+        <Image
+          src={blog.poster.src}
+          alt={blog.poster.alt}
+          fill
+          className="object-cover object-center"
+        />
       </Link>
       <p className="my-4 text-2xl text-justify">
         {formatDate(blog.updatedDate)}

@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function HomeCta() {
   return (
     <section id="contact" className="bg-light">
-      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-12 items-center px-6 md:px-12">
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-6 md:px-12">
         <div className="text-center lg:text-left text-primary">
           <h2 className="section_header decoration-light">
             Start Your Journey
@@ -14,7 +14,7 @@ export default function HomeCta() {
           <h3 className="text-4xl text-secondary mt-2">
             Book a 30-min Consultation
           </h3>
-          <p className="my-4 leading-relaxed lg:w-[min(100%,60ch)]">
+          <p className="my-4 leading-relaxed w-[60ch] lg:w-full mx-auto">
             Lorem Ipsum is not simply random text. It has roots in a piece of
             classical Latin literature from 45 BC, making it over 2000 years
             old.
@@ -40,11 +40,14 @@ export default function HomeCta() {
             </Link>
           </p>
         </div>
-        <div className="h-[600px]">
-          <InlineWidget
-            url="https://calendly.com/edubas128/30min"
-            styles={{ height: "600px", width: "100%" }}
-          />
+        <div className="relative lex px-12">
+          <div className="h-[600px] relative w-full z-10">
+            <InlineWidget
+              url="https://calendly.com/edubas128/30min"
+              styles={{ height: "600px", width: "100%" }}
+            />
+          </div>
+          <div className="bg-secondary absolute -bottom-5 right-7 w-3/4 h-[80%] z-0" />
         </div>
       </div>
     </section>
