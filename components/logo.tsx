@@ -11,9 +11,9 @@ export default function Logo() {
         />
       </div>
       <div className="ml-2 hidden sm:block">
-        <h5 className="text-xl sm:text-2xl lg:text-3xl">TAWFIK</h5>
+        <h5 className="text-xl sm:text-2xl lg:text-4xl">TAWFIK</h5>
         <h4 className="text-base sm:text-lg lg:text-xl font-light -mt-2 lg:-mt-1">
-          EXECUTIVE COACHING
+          EXECUTIVE COACHING & CONSULTING
         </h4>
       </div>
     </>

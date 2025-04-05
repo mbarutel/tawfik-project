@@ -1,5 +1,6 @@
 import { services } from "@/lib/data";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HomeServices() {
   return (
@@ -37,7 +38,9 @@ function ImageFrame({ src, alt }: { src: string; alt: string }) {
     <div className="relative w-full">
       <div className="hidden xl:block absolute bg-primary inset-0 -translate-x-2 translate-y-2" />
       <div className="relative h-[450px] w-full xl:translate-x-2 xl:-translate-y-2">
-        <Image src={src} alt={alt} fill className="object-cover" />
+        <Link href="/services" target="_blank" rel="noreferrer">
+          <Image src={src} alt={alt} fill className="object-cover" />
+        </Link>
       </div>
     </div>
   );

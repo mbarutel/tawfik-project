@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default function HomeHeader() {
-  const texts = ["Executive Coaching", "People & Culture", "Psychology-based"];
+  const texts = ["Executive Coaching", "Workshops", "Consulting"];
 
   return (
     <header className="relative bg-[url('/header-bg.webp')] bg-cover bg-center">
