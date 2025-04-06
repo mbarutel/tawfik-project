@@ -3,9 +3,8 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 export interface TypeBookFields {
     title: EntryFieldTypes.Symbol;
     author: EntryFieldTypes.Symbol;
-    slug: EntryFieldTypes.Symbol;
     poster: EntryFieldTypes.AssetLink;
-    description: EntryFieldTypes.RichText;
+    description: EntryFieldTypes.Text;
 }
 
 export type TypeBookSkeleton = EntrySkeletonType<TypeBookFields, "book">;

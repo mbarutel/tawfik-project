@@ -33,11 +33,9 @@ export type ArticleType = {
 };
 
 export type BookType = {
-  slug: string;
   title: string;
-  updatedDate: Date;
-  poster: AssetType;
   author: string;
+  poster: AssetType;
   description: string;
 };
 

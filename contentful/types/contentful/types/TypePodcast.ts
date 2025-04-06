@@ -2,7 +2,6 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 
 export interface TypePodcastFields {
     title: EntryFieldTypes.Symbol;
-    slug: EntryFieldTypes.Symbol;
     link: EntryFieldTypes.Symbol;
     poster: EntryFieldTypes.AssetLink;
     description: EntryFieldTypes.RichText;

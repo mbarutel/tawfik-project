@@ -1,13 +1,11 @@
-import { BlogEntry, BlogType } from "./types";
+import { BookEntry, BookType } from "./types";
 import parserAssetEntry from "./parser-asset-entry";
 
-export default function parserBlogEntry(blogEntry: BlogEntry): BlogType {
+export default function parserBookEntry(bookEntry: BookEntry): BookType {
   return {
-    slug: blogEntry.fields.slug,
-    title: blogEntry.fields.title,
-    updatedDate: new Date(blogEntry.sys.updatedAt),
-    poster: parserAssetEntry({ asset: blogEntry.fields.poster }),
-    description: blogEntry.fields.description,
-    body: blogEntry.fields.body,
+    title: bookEntry.fields.title,
+    author: bookEntry.fields.author,
+    poster: parserAssetEntry({ asset: bookEntry.fields.poster }),
+    description: bookEntry.fields.description,
   };
 }
