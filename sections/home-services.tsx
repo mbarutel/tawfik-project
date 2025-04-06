@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function HomeServices() {
   return (
     <section id="services" className="bg-light">
-      <div className="container">
+      <div className="container flex flex-col items-center">
         <h2 className="section_header decoration-secondary mb-8 xl:mb-16 text-center text-primary">
           SERVICES
         </h2>
@@ -28,6 +28,12 @@ export default function HomeServices() {
             </div>
           ))}
         </div>
+        <Link
+          href="/services"
+          className="button text-secondary border-secondary xl:text-primary xl:border-primary mt-6"
+        >
+          Our Services
+        </Link>
       </div>
     </section>
   );

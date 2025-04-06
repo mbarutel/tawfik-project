@@ -3,7 +3,7 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 export interface TypeTestimonialFields {
     name: EntryFieldTypes.Symbol;
     position?: EntryFieldTypes.Symbol;
-    body: EntryFieldTypes.RichText;
+    testimony: EntryFieldTypes.Text;
 }
 
 export type TypeTestimonialSkeleton = EntrySkeletonType<TypeTestimonialFields, "testimonial">;

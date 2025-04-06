@@ -14,7 +14,7 @@ export default function Navbar() {
     <nav className="bg-primary sticky top-0 left-0 z-[999]">
       <div className="container flex justify-between items-center">
         {/* Logo Placeholder */}
-        <Link href="/" className="text-secondary flex items-center py-2">
+        <Link href="/" className="text-secondary flex items-center py-4">
           <Logo />
         </Link>
 
@@ -23,7 +23,7 @@ export default function Navbar() {
           {links.map((link, index) => (
             <li
               key={index}
-              className="hover:text-secondary py-3 px-6 transition active:scale-95"
+              className="hover:text-secondary py-3 px-6 transition active:scale-95 last:bg-secondary last:text-primary last:hover:text-light"
             >
               <a href={link.hash}>{link.name}</a>
             </li>

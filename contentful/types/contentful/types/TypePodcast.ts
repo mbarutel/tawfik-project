@@ -4,7 +4,7 @@ export interface TypePodcastFields {
     title: EntryFieldTypes.Symbol;
     link: EntryFieldTypes.Symbol;
     poster: EntryFieldTypes.AssetLink;
-    description: EntryFieldTypes.RichText;
+    description: EntryFieldTypes.Text;
 }
 
 export type TypePodcastSkeleton = EntrySkeletonType<TypePodcastFields, "podcast">;

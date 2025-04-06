@@ -26,7 +26,7 @@ export default async function BlogBooks() {
 
   return (
     <div>
-      <h2 className="section_header decoration-primary mb-10">Books</h2>
+      <h2 className="blog_section_header">Books</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-12 gap-x-16 lg:gap-x-22 2xl:gap-x-32">
         {books.map((book, index) => (
           <Fragment key={index}>
@@ -49,11 +49,9 @@ function BookCard({ book }: { book: BookType }) {
           className="object-cover object-center"
         />
       </div>
-      <h2 className="text-4xl font-bold hover:underline text-center my-4">
-        {book.title}
-      </h2>
+      <h2 className="text-4xl font-bold text-center mt-6">{book.title}</h2>
+      <p className="italic font-light text-center mb-6">By {book.author}</p>
       <p className="text-justify">{book.description}</p>
-      <p className="mt-6 italic font-light">{book.author}</p>
     </div>
   );
 }

@@ -29,7 +29,7 @@ export default async function BlogArticles() {
 
   return (
     <div>
-      <h2 className="section_header decoration-primary mb-10">Articles</h2>
+      <h2 className="blog_section_header">Articles</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-12 gap-x-16 lg:gap-x-22 2xl:gap-x-32">
         {articles.map((article) => (
           <Fragment key={article.slug}>
@@ -46,13 +46,13 @@ function ArticleCard({ article }: { article: ArticleType }) {
     <div className="flex flex-col">
       <Link
         href={`/article/${article.slug}`}
-        className="relative h-[350px] w-full"
+        className="relative h-[350px] w-full overflow-hidden"
       >
         <Image
           src={article.poster.src}
           alt={article.poster.alt}
           fill
-          className="object-cover object-center"
+          className="object-cover object-center hover:scale-110 transition"
         />
       </Link>
       <p className="my-4 text-2xl text-justify">

@@ -1,7 +1,7 @@
 import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
 
 export interface TypeQuoteFields {
-    Quote: EntryFieldTypes.Text;
+    quote: EntryFieldTypes.Text;
     author: EntryFieldTypes.Symbol;
 }
 

@@ -67,3 +67,7 @@ p {
 .container {
   @apply container mx-auto px-3;
 }
+
+.blog_section_header {
+  @apply underline font-bold text-4xl sm:text-5xl xl:text-6xl decoration-primary mb-10 text-center;
+}

@@ -1,9 +1,9 @@
-import { TypeBookSkeleton } from "../types/contentful/types";
+import { TypePodcastSkeleton } from "../types/contentful/types";
 import { ContentfulClientApi } from "contentful";
 import contentfulClient from "../utils/client";
-import { BookType } from "../utils/types";
+import { PodcastType } from "../utils/types";
 
-export class Book {
+export class Podcast {
   private client: ContentfulClientApi<undefined>;
   private parser: Function;
 
@@ -12,13 +12,13 @@ export class Book {
     this.parser = parser;
   }
 
-  public async getBooks(): Promise<BookType[]> {
-    const bookResult = await this.client.getEntries<TypeBookSkeleton>({
-      content_type: "book",
+  public async getPodcasts(): Promise<PodcastType[]> {
+    const podcastResult = await this.client.getEntries<TypePodcastSkeleton>({
+      content_type: "podcast",
       include: 2,
       order: ["sys.createdAt", "sys.updatedAt"],
     });
 
-    return bookResult.items.map((bookEntry) => this.parser(bookEntry));
+    return podcastResult.items.map((podcastEntry) => this.parser(podcastEntry));
   }
 }

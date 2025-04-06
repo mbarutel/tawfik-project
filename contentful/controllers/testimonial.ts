@@ -1,9 +1,9 @@
-import { TypeBookSkeleton } from "../types/contentful/types";
+import { TypeTestimonialSkeleton } from "../types/contentful/types";
 import { ContentfulClientApi } from "contentful";
 import contentfulClient from "../utils/client";
-import { BookType } from "../utils/types";
+import { TestimonialType } from "../utils/types";
 
-export class Book {
+export class Testimonial {
   private client: ContentfulClientApi<undefined>;
   private parser: Function;
 
@@ -12,13 +12,16 @@ export class Book {
     this.parser = parser;
   }
 
-  public async getBooks(): Promise<BookType[]> {
-    const bookResult = await this.client.getEntries<TypeBookSkeleton>({
-      content_type: "book",
-      include: 2,
-      order: ["sys.createdAt", "sys.updatedAt"],
-    });
+  public async getTestimonials(): Promise<TestimonialType[]> {
+    const testimonialResult =
+      await this.client.getEntries<TypeTestimonialSkeleton>({
+        content_type: "testimonial",
+        include: 2,
+        order: ["sys.createdAt", "sys.updatedAt"],
+      });
 
-    return bookResult.items.map((bookEntry) => this.parser(bookEntry));
+    return testimonialResult.items.map((testimonialEntry) =>
+      this.parser(testimonialEntry),
+    );
   }
 }

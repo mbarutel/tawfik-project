@@ -40,11 +40,9 @@ export type BookType = {
 };
 
 export type PodcastType = {
-  slug: string;
   title: string;
-  updatedDate: Date;
-  poster: AssetType;
   link: string;
+  poster: AssetType;
   description: string;
 };
 
@@ -55,7 +53,6 @@ export type QuoteType = {
 
 export type TestimonialType = {
   name: string;
-  updatedDate: Date;
-  position: string;
-  body: string;
+  position: string | null;
+  testimony: string;
 };
