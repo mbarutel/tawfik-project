@@ -1,17 +1,17 @@
 import { RichTextRenderer } from "@/components";
-import { Blog } from "@/contentful/controllers/blog";
-import parserBlogEntry from "@/contentful/utils/parser-blog-entry";
+import { Article } from "@/contentful/controllers/article";
+import parserArticleEntry from "@/contentful/utils/parser-article-entry";
 import { formatDate } from "@/lib";
 import { draftMode } from "next/headers";
 import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
-  const blogInstance = new Blog({
+  const articleInstance = new Article({
     preview: false,
-    parser: parserBlogEntry,
+    parser: parserArticleEntry,
   });
 
-  return await blogInstance.getBlogs();
+  return await articleInstance.getArticles();
 }
 
 export default async function Page({
@@ -22,24 +22,26 @@ export default async function Page({
   const { slug } = await params;
   const draft = await draftMode();
 
-  const blogInstance = new Blog({
+  const articleInstance = new Article({
     preview: draft.isEnabled,
-    parser: parserBlogEntry,
+    parser: parserArticleEntry,
   });
 
-  const blog = await blogInstance.getBlog(slug);
+  const article = await articleInstance.getArticle(slug);
 
-  if (!blog) {
+  if (!article) {
     return notFound();
   }
 
   return (
     <article className="mb-16">
       <div className="max-w-3xl mx-auto px-4 text-center">
-        <p className="font-light">{formatDate(blog.updatedDate)}</p>
-        <h1 className="text-6xl xl:text-8xl font-bold my-16">{blog.title}</h1>
+        <p className="font-light">{formatDate(article.updatedDate)}</p>
+        <h1 className="text-6xl xl:text-8xl font-bold my-16">
+          {article.title}
+        </h1>
       </div>
-      <RichTextRenderer document={blog.body} />
+      <RichTextRenderer document={article.body} />
     </article>
   );
 }
