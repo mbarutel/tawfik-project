@@ -1,5 +1,5 @@
+import { Header } from "@/components";
 import {
-  HomeHeader,
   HomeAbout,
   HomeServices,
   HomeQuotes,
@@ -10,7 +10,7 @@ import {
 export default async function Home() {
   return (
     <>
-      <HomeHeader />
+      <Header />
       <HomeAbout />
       <HomeServices />
       <HomeQuotes />

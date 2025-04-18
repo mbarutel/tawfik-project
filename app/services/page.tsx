@@ -1,23 +1,27 @@
+import { Header } from "@/components";
 import { services } from "@/lib/data";
 import Image from "next/image";
 import { Fragment } from "react";
 
 export default async function page() {
   return (
-    <section>
-      <div className="container">
-        <h2 className="section_header decoration-primary text-center">
-          ALL SERVICES
-        </h2>
-        <div className="flex flex-col gap-24 my-24">
-          {services.map((service, index) => (
-            <Fragment key={index}>
-              <ServiceCard service={service} />
-            </Fragment>
-          ))}
+    <>
+      <Header />
+      <section id="services">
+        <div className="container">
+          <h2 className="section_header decoration-primary text-center">
+            ALL SERVICES
+          </h2>
+          <div className="flex flex-col gap-24 my-24">
+            {services.map((service, index) => (
+              <Fragment key={index}>
+                <ServiceCard service={service} />
+              </Fragment>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
