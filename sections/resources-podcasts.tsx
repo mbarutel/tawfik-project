@@ -16,7 +16,7 @@ export async function generateStaticParams() {
   return await podcastInstance.getPodcasts();
 }
 
-export default async function BlogPodcasts() {
+export default async function ResourcesPodcasts() {
   const draft = await draftMode();
 
   const podcastInstance = new Podcast({
@@ -24,10 +24,21 @@ export default async function BlogPodcasts() {
     parser: parserPodcastEntry,
   });
 
-  const podcasts = await podcastInstance.getPodcasts();
+  const podcastsArray = await podcastInstance.getPodcasts();
+
+  const podcasts = podcastsArray.slice(0, 3);
 
   return (
-    <div>
+    <div className="flex flex-col items-center relative">
+      {podcastsArray.length > 3 && (
+        <Link
+          href="/podcasts"
+          className="text-white italic underline text-2xl mt-auto group absolute top-5 right-0"
+        >
+          See All Podcasts
+          <BsArrowRight className="inline-flex ml-3 group-hover:translate-x-2 transition" />
+        </Link>
+      )}
       <h2 className="blog_section_header">Podcasts</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-12 gap-x-16 lg:gap-x-22 2xl:gap-x-32">
         {podcasts.map((podcast, index) => (
@@ -47,7 +58,7 @@ function PodcastCard({ podcast }: { podcast: PodcastType }) {
         href={podcast.link}
         target="_blank"
         rel="noreferrer"
-        className="relative h-[350px] w-[250px] mx-auto overflow-hidden"
+        className="relative h-[350px] w-full overflow-hidden"
       >
         <Image
           src={podcast.poster.src}
@@ -57,7 +68,7 @@ function PodcastCard({ podcast }: { podcast: PodcastType }) {
         />
       </Link>
       <Link href={podcast.link} target="_blank" rel="noreferrer">
-        <h2 className="text-4xl font-bold hover:underline text-center my-4">
+        <h2 className="text-4xl font-bold hover:underline my-4">
           {podcast.title}
         </h2>
       </Link>

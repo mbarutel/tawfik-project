@@ -14,7 +14,7 @@ export async function generateStaticParams() {
   return await articleInstance.getArticles();
 }
 
-export default async function Page({
+export default async function page({
   params,
 }: {
   params: Promise<{ slug: string }>;
@@ -34,10 +34,10 @@ export default async function Page({
   }
 
   return (
-    <article className="mb-16">
+    <article className="mb-16 scroll-mt-12">
       <div className="max-w-3xl mx-auto px-4 text-center">
         <p className="font-light">{formatDate(article.updatedDate)}</p>
-        <h1 className="text-6xl xl:text-8xl font-bold my-16">
+        <h1 className="text-4xl xl:text-6xl font-bold my-10">
           {article.title}
         </h1>
       </div>

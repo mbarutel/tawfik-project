@@ -17,7 +17,7 @@ export async function generateStaticParams() {
   return await articleInstance.getArticles();
 }
 
-export default async function BlogArticles() {
+export default async function ResourcesArticles() {
   const draft = await draftMode();
 
   const articleInstance = new Article({
@@ -25,10 +25,21 @@ export default async function BlogArticles() {
     parser: parserArticleEntry,
   });
 
-  const articles = await articleInstance.getArticles();
+  const articlesArray = await articleInstance.getArticles();
+
+  const articles = articlesArray.slice(0, 3);
 
   return (
-    <div>
+    <div className="flex flex-col items-center relative">
+      {articlesArray.length > 3 && (
+        <Link
+          href="/articles"
+          className="text-white italic underline text-2xl mt-auto group absolute top-5 right-0"
+        >
+          See All Articles
+          <BsArrowRight className="inline-flex ml-3 group-hover:translate-x-2 transition" />
+        </Link>
+      )}
       <h2 className="blog_section_header">Articles</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-12 gap-x-16 lg:gap-x-22 2xl:gap-x-32">
         {articles.map((article) => (

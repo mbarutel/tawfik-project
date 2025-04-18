@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="text-secondary flex items-center">
             <Logo />
           </div>
-          <p className="leading-tight max-w-[60ch]">
+          <p className="!text-[20px] text-sm leading-tight max-w-[60ch]">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout.
           </p>

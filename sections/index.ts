@@ -1,6 +1,6 @@
-import BlogArticles from "./blog-articles";
-import BlogBooks from "./blog-books";
-import BlogPodcasts from "./blog-podcasts";
+import ResourcesArticles from "./resources-articles";
+import ResourcesBooks from "./resources-books";
+import ResourcesPodcasts from "./resources-podcasts";
 import HomeAbout from "./home-about";
 import HomeCta from "./home-cta";
 import HomeHeader from "./home-header";
@@ -9,9 +9,9 @@ import HomeResources from "./home-resources";
 import HomeServices from "./home-services";
 
 export {
-  BlogArticles,
-  BlogBooks,
-  BlogPodcasts,
+  ResourcesArticles,
+  ResourcesBooks,
+  ResourcesPodcasts,
   HomeAbout,
   HomeCta,
   HomeHeader,

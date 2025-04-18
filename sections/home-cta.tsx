@@ -23,27 +23,27 @@ export default function HomeCta() {
             <BiSolidChevronRightSquare className="inline-flex text-secondary" />
             Mobile:
             <Link
-              href="tel:04028050322"
+              href="tel:0435867387"
               className="hover:underline hover:text-secondary transition"
             >
-              04028050322
+              0435867387
             </Link>
           </p>
           <p className="flex items-center gap-1 justify-center lg:justify-start">
             <BiSolidChevronRightSquare className="inline-flex text-secondary" />
             Email:
             <Link
-              href="mailto:contact@email.com"
+              href="mailto:info@tawfikecc.com.au"
               className="hover:underline hover:text-secondary transition"
             >
-              contact@email.com
+              info@tawfikecc.com.au
             </Link>
           </p>
         </div>
         <div className="relative lex px-4 sm:px-12">
           <div className="h-[600px] relative w-full z-10">
             <InlineWidget
-              url="https://calendly.com/edubas128/30min"
+              url="https://calendly.com/tawfikecc-info/30min"
               styles={{ height: "600px", width: "100%" }}
             />
           </div>

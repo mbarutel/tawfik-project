@@ -12,15 +12,15 @@ export const links = [
   },
   {
     name: "Services",
-    hash: "/#services",
+    hash: "/services",
   },
   {
     name: "Contact",
     hash: "/#contact",
   },
   {
-    name: "Blog",
-    hash: "/blog",
+    name: "Resources",
+    hash: "/resources",
   },
 ] as const;
 
@@ -33,6 +33,8 @@ export const services = [
     title: "Executive Coaching",
     subTitle: "Leadership & Performance Coaching",
     text: "Nullam lacus magna amet consectetur aenean duis vitae imperdiet convallis. Lorem maximus imperdiet ipsum varius sed in, metus praesent vel.",
+    longText:
+      "Tristique, ac massa, semper nisl eget praesent dignissim ac lectus. Ut dignissim leo imperdiet vestibulum, tortor sed euismod enim magna. Tortor malesuada, metus varius, tempor eleifend nullam sapien convallis nulla. At ac in non suspendisse vulputate convallis bibendum efficitur ante. Eu nunc vestibulum at eu sapien elit turpis congue amet.",
     link: "#",
   },
   {
@@ -43,6 +45,8 @@ export const services = [
     title: "Workshops",
     subTitle: "Leadership Development Programs",
     text: "Cras, ultrices pellentesque dignissim lacus nullam vestibulum rhoncus, vitae nunc. Dignissim, ut, efficitur sed metus magna vitae ante varius faucibus.",
+    longText:
+      "Vel urna leo, consectetur viverra magnis dignissim augue pellentesque, eget. Imperdiet arcu, nulla elementum arcu cras, porta dapibus et quam. Vel dapibus curabitur quam varius tellus ac dui felis amet. Enim, eget dapibus ultricies vivamus, amet vestibulum at eros pretium. Rhoncus, cras sit diam, morbi ipsum pellentesque tellus lectus fermentum.",
     link: "#",
   },
   {
@@ -53,6 +57,8 @@ export const services = [
     title: "Consulting",
     subTitle: "Strategic Advisory Services",
     text: "Eleifend proin tristique, sed metus auctor justo aliquam consequat aenean. Arcu tristique in pellentesque, purus, placerat ligula vitae suscipit est.",
+    longText:
+      "Vestibulum sem nulla blandit ac imperdiet ac gravida pellentesque quisque. Porttitor, pulvinar, curabitur non donec dictumst quam imperdiet laoreet diam. Eleifend, ridiculus, vestibulum non fermentum eleifend et ipsum ac in. Elementum nisl eu sed, eget id pellentesque suscipit efficitur dapibus. Eu dictumst, quisque ipsum porta maximus nec vitae laoreet dui.",
     link: "#",
   },
 ] as const;
