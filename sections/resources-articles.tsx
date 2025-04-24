@@ -31,15 +31,6 @@ export default async function ResourcesArticles() {
 
   return (
     <div className="flex flex-col items-center relative">
-      {articlesArray.length > 3 && (
-        <Link
-          href="/articles"
-          className="text-white italic underline text-2xl mt-auto group absolute top-5 right-0"
-        >
-          See All Articles
-          <BsArrowRight className="inline-flex ml-3 group-hover:translate-x-2 transition" />
-        </Link>
-      )}
       <h2 className="blog_section_header">Articles</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-12 gap-x-16 lg:gap-x-22 2xl:gap-x-32">
         {articles.map((article) => (
@@ -48,6 +39,15 @@ export default async function ResourcesArticles() {
           </Fragment>
         ))}
       </div>
+      {articlesArray.length > 3 && (
+        <Link
+          href="/articles"
+          className="text-white italic underline text-2xl group block mt-6 lg:mt-0 lg:absolute top-3 2xl:top-5 right-0"
+        >
+          See All Articles
+          <BsArrowRight className="hidden lg:inline-flex ml-3 group-hover:translate-x-2 transition" />
+        </Link>
+      )}
     </div>
   );
 }
