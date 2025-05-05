@@ -5,6 +5,7 @@ import {
   HomeQuotes,
   HomeCta,
   HomeResources,
+  HomeTestimonials,
 } from "@/sections";
 
 export default async function Home() {
@@ -16,6 +17,7 @@ export default async function Home() {
       <HomeQuotes />
       <HomeCta />
       <HomeResources />
+      <HomeTestimonials />
     </>
   );
 }

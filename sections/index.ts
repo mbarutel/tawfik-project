@@ -6,6 +6,7 @@ import HomeCta from "./home-cta";
 import HomeQuotes from "./home-quotes";
 import HomeResources from "./home-resources";
 import HomeServices from "./home-services";
+import HomeTestimonials from "./home-testimonials";
 
 export {
   ResourcesArticles,
@@ -16,4 +17,5 @@ export {
   HomeQuotes,
   HomeResources,
   HomeServices,
+  HomeTestimonials,
 };
