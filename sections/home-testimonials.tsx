@@ -24,7 +24,7 @@ export default async function HomeTestimonials() {
 
   return (
     <section className="bg-[url('/testimonials-bg.webp')] bg-cover">
-      <div className="container mx-auto py-16">
+      <div className="container mx-auto">
         <TestimonialsCarousel testimonials={testimonials} />
       </div>
     </section>
