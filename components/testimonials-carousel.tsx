@@ -22,7 +22,7 @@ export default function TestimonialsCarousel({
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <div className="bg-primary py-24 px-8">
+    <div className="bg-primary/90 rounded-sm py-24 px-8">
       <div className="flex justify-between mb-6">
         <h2 className="section_header !no-underline">Testimonials</h2>
         <div className="flex gap-3">
