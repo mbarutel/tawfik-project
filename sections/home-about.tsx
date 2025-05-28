@@ -17,19 +17,22 @@ function AboutText() {
     <div className="my-auto">
       <h2 className="section_header decoration-secondary">ABOUT</h2>
       <p className="mt-4 md:mt-6 text-justify">
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It
-        has roots in a piece of classical Latin literature from 45 BC, making it
-        over 2000 years old. Richard McClintock, a Latin professor at
-        Hampden-Sydney College in Virginia, looked up one of the more obscure
-        Latin words, consectetur, from a Lorem Ipsum passage, and going through
-        the cites of.Contrary to popular belief, Lorem Ipsum is not simply
-        random text. It has roots in a piece of classical Latin literature from
-        45 BC, making it over 2000 years old. Richard McClintock, a Latin
-        professor at Hampden-Sydney College.
+        At Tawfik Executive Coaching and Consulting, we believe that the best
+        solutions come from within. Our role is to support leaders to uncover
+        those solutions—by creating the space, guidance and tools to help them
+        grow with confidence. We work alongside leaders to build a toolkit of
+        practical, adaptable skills they can utilise throughout their leadership
+        journey. Whether it's navigating change, leading with purpose, or
+        building stronger relationships, our focus is on helping leaders become
+        more effective, grounded, and capable in real-world situations. We also
+        work closely with teams and organisations—helping them lead their people
+        with clarity, connection and resilience.
       </p>
       <br />
       <p className="text-justify mb-6 md:mb-8">
-        Book your time for a free kick-off session to learn more.
+        Above all, we’re here to support growth—of people, leadership and
+        culture. Book your time for a free consultation to learn more about how
+        we can support your growth.
       </p>
       <Link href="#contact" className="button border-secondary text-secondary">
         Book Now

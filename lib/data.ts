@@ -32,9 +32,11 @@ export const services = [
     },
     title: "Executive Coaching",
     subTitle: "Leadership & Performance Coaching",
-    text: "Nullam lacus magna amet consectetur aenean duis vitae imperdiet convallis. Lorem maximus imperdiet ipsum varius sed in, metus praesent vel.",
-    longText:
-      "Tristique, ac massa, semper nisl eget praesent dignissim ac lectus. Ut dignissim leo imperdiet vestibulum, tortor sed euismod enim magna. Tortor malesuada, metus varius, tempor eleifend nullam sapien convallis nulla. At ac in non suspendisse vulputate convallis bibendum efficitur ante. Eu nunc vestibulum at eu sapien elit turpis congue amet.",
+    text: "One-on-one coaching to support leaders in strengthening their leadership, enhancing performance, and navigating complex challenges with confidence.",
+    longText: [
+      "We offer personalised one-on-one coaching that supports leaders to grow in confidence, clarity, and capability. Whether you’re stepping into a new role, navigating complexity, or seeking to elevate your leadership, our coaching provides a space to reflect, challenge assumptions, and move forward with purpose. Each coaching journey is tailored to the individual, with a focus on building self-awareness, improving decision-making, and strengthening relationships. We equip leaders with practical tools and frameworks they can use day-to-day—helping them lead more effectively not just during coaching, but well beyond.",
+      "Our coaching is built on trust, confidentiality, and meaningful connection.",
+    ],
     link: "#",
   },
   {
@@ -44,9 +46,9 @@ export const services = [
     },
     title: "Workshops",
     subTitle: "Leadership Development Programs",
-    text: "Cras, ultrices pellentesque dignissim lacus nullam vestibulum rhoncus, vitae nunc. Dignissim, ut, efficitur sed metus magna vitae ante varius faucibus.",
+    text: "Engaging, practical leadership development programs designed to build capability, foster growth, and equip teams with tools that last.",
     longText:
-      "Vel urna leo, consectetur viverra magnis dignissim augue pellentesque, eget. Imperdiet arcu, nulla elementum arcu cras, porta dapibus et quam. Vel dapibus curabitur quam varius tellus ac dui felis amet. Enim, eget dapibus ultricies vivamus, amet vestibulum at eros pretium. Rhoncus, cras sit diam, morbi ipsum pellentesque tellus lectus fermentum.",
+      "Engaging, practical leadership development programs designed to build capability, foster growth, and equip teams with tools that last.",
     link: "#",
   },
   {
@@ -56,9 +58,9 @@ export const services = [
     },
     title: "Consulting",
     subTitle: "Strategic Advisory Services",
-    text: "Eleifend proin tristique, sed metus auctor justo aliquam consequat aenean. Arcu tristique in pellentesque, purus, placerat ligula vitae suscipit est.",
+    text: "Tailored strategic advisory services to help organisations align leadership, culture, and strategy for long-term impact.",
     longText:
-      "Vestibulum sem nulla blandit ac imperdiet ac gravida pellentesque quisque. Porttitor, pulvinar, curabitur non donec dictumst quam imperdiet laoreet diam. Eleifend, ridiculus, vestibulum non fermentum eleifend et ipsum ac in. Elementum nisl eu sed, eget id pellentesque suscipit efficitur dapibus. Eu dictumst, quisque ipsum porta maximus nec vitae laoreet dui.",
+      "Tailored strategic advisory services to help organisations align leadership, culture, and strategy for long-term impact.",
     link: "#",
   },
 ] as const;
