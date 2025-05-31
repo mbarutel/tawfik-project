@@ -19,10 +19,12 @@ export default function HomeResources() {
               RECOMMENDED READING
             </h2>
             <p className="w-[min(100%,60ch)] my-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Explore articles, books, podcasts, and insights that inspire
+              better leadership. This is a space to discover new ideas, build
+              your thinking, and stay up to date with the trends shaping
+              courageous, resilient, and effective leadership. Whether you’re
+              deepening your own practice or supporting others to grow, these
+              resources are here to guide and challenge you.
             </p>
             <Link href="/resources" className="button border-primary">
               Resources

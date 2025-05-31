@@ -15,9 +15,10 @@ export default function HomeCta() {
             Book a 30-min Consultation
           </h3>
           <p className="my-4 leading-relaxed w-full mx-auto">
-            Lorem Ipsum is not simply random text. It has roots in a piece of
-            classical Latin literature from 45 BC, making it over 2000 years
-            old.
+            Interested in working together or learning more? Book a free
+            30-minute consultation to explore how we can support your leadership
+            journey. You can also reach us directly via phone or email to start
+            the conversation.
           </p>
           <p className="flex items-center gap-1 justify-center lg:justify-start">
             <BiSolidChevronRightSquare className="inline-flex text-secondary" />
@@ -53,9 +54,3 @@ export default function HomeCta() {
     </section>
   );
 }
-
-// <p className="montserrat text-base lg:text-xl">
-//   Book Now
-//   <BsArrowRight className="hidden lg:inline-flex ml-2" />
-//   <BsArrowDown className="lg:hidden inline-flex ml-2" />
-// </p>

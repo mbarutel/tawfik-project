@@ -16,7 +16,7 @@ export class Quote {
     const quoteResult = await this.client.getEntries<TypeQuoteSkeleton>({
       content_type: "quote",
       include: 2,
-      order: ["sys.createdAt", "sys.updatedAt"],
+      order: ["-sys.createdAt", "-sys.updatedAt"],
     });
 
     return quoteResult.items.map((quoteEntry) => this.parser(quoteEntry));

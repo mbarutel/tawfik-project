@@ -16,7 +16,7 @@ export class Book {
     const bookResult = await this.client.getEntries<TypeBookSkeleton>({
       content_type: "book",
       include: 2,
-      order: ["sys.createdAt", "sys.updatedAt"],
+      order: ["-sys.createdAt", "-sys.updatedAt"],
     });
 
     return bookResult.items.map((bookEntry) => this.parser(bookEntry));

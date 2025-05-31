@@ -22,6 +22,10 @@ export default async function HomeQuotes() {
 
   const quotes = await quoteInstance.getQuotes();
 
+  if (quotes.length === 0) {
+    return null;
+  }
+
   return (
     <section className="bg-[url('/quotes-bg.webp')] bg-cover">
       <div className="container mx-auto py-16">

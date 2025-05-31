@@ -17,7 +17,7 @@ export class Testimonial {
       await this.client.getEntries<TypeTestimonialSkeleton>({
         content_type: "testimonial",
         include: 2,
-        order: ["sys.createdAt", "sys.updatedAt"],
+        order: ["-sys.createdAt", "-sys.updatedAt"],
       });
 
     return testimonialResult.items.map((testimonialEntry) =>

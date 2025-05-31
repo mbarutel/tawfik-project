@@ -33,11 +33,6 @@ export const services = [
     title: "Executive Coaching",
     subTitle: "Leadership & Performance Coaching",
     text: "One-on-one coaching to support leaders in strengthening their leadership, enhancing performance, and navigating complex challenges with confidence.",
-    longText: [
-      "We offer personalised one-on-one coaching that supports leaders to grow in confidence, clarity, and capability. Whether you’re stepping into a new role, navigating complexity, or seeking to elevate your leadership, our coaching provides a space to reflect, challenge assumptions, and move forward with purpose. Each coaching journey is tailored to the individual, with a focus on building self-awareness, improving decision-making, and strengthening relationships. We equip leaders with practical tools and frameworks they can use day-to-day—helping them lead more effectively not just during coaching, but well beyond.",
-      "Our coaching is built on trust, confidentiality, and meaningful connection.",
-    ],
-    link: "#",
   },
   {
     image: {
@@ -46,10 +41,8 @@ export const services = [
     },
     title: "Workshops",
     subTitle: "Leadership Development Programs",
+
     text: "Engaging, practical leadership development programs designed to build capability, foster growth, and equip teams with tools that last.",
-    longText:
-      "Engaging, practical leadership development programs designed to build capability, foster growth, and equip teams with tools that last.",
-    link: "#",
   },
   {
     image: {
@@ -59,9 +52,6 @@ export const services = [
     title: "Consulting",
     subTitle: "Strategic Advisory Services",
     text: "Tailored strategic advisory services to help organisations align leadership, culture, and strategy for long-term impact.",
-    longText:
-      "Tailored strategic advisory services to help organisations align leadership, culture, and strategy for long-term impact.",
-    link: "#",
   },
 ] as const;
 

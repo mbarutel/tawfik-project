@@ -30,7 +30,7 @@ export class Article {
     const articleResult = await this.client.getEntries<TypeArticleSkeleton>({
       content_type: "article",
       include: 2,
-      order: ["sys.createdAt", "sys.updatedAt"],
+      order: ["-sys.createdAt", "-sys.updatedAt"],
     });
 
     return this.parser(articleResult.items[0]);
@@ -40,7 +40,7 @@ export class Article {
     const articleResult = await this.client.getEntries<TypeArticleSkeleton>({
       content_type: "article",
       include: 2,
-      order: ["sys.createdAt", "sys.updatedAt"],
+      order: ["-sys.createdAt", "-sys.updatedAt"],
     });
 
     return articleResult.items.map((articleEntry) => this.parser(articleEntry));

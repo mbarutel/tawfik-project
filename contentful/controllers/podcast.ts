@@ -16,7 +16,7 @@ export class Podcast {
     const podcastResult = await this.client.getEntries<TypePodcastSkeleton>({
       content_type: "podcast",
       include: 2,
-      order: ["sys.createdAt", "sys.updatedAt"],
+      order: ["-sys.createdAt", "-sys.updatedAt"],
     });
 
     return podcastResult.items.map((podcastEntry) => this.parser(podcastEntry));

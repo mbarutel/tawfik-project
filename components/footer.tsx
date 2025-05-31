@@ -11,8 +11,9 @@ export default function Footer() {
             <Logo />
           </div>
           <p className="!text-[20px] text-sm leading-tight max-w-[60ch]">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout.
+            Great leadership doesn’t happen by chance — it’s an investment with
+            lasting impact. Explore how executive coaching and consulting can
+            make the difference.
           </p>
         </div>
         <div>

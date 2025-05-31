@@ -22,6 +22,10 @@ export default async function HomeTestimonials() {
 
   const testimonials = await testimonialInstance.getTestimonials();
 
+  if (testimonials.length === 0) {
+    return null;
+  }
+
   return (
     <section className="bg-[url('/testimonials-bg.webp')] bg-cover">
       <div className="container mx-auto">
