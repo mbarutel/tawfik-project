@@ -5,7 +5,7 @@ export default function ServicesCoaching() {
   const service = services[0];
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 group">
+    <div className="grid grid-cols-1 lg:grid-cols-2 group items-center">
       <ServiceImageFrame src={service.image.src} alt={service.image.alt} />
       <div className="flex flex-col justify-center">
         <h2 className="text-4xl lg:text-6xl font-bold mb-3 lg:mb-6">

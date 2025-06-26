@@ -15,13 +15,13 @@ export const links = [
     hash: "/services",
   },
   {
-    name: "Contact",
+    name: "Book Now",
     hash: "/#contact",
   },
-  {
-    name: "Resources",
-    hash: "/resources",
-  },
+  // {
+  //   name: "Resources",
+  //   hash: "/resources",
+  // },
 ] as const;
 
 export const services = [

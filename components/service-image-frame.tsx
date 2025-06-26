@@ -8,7 +8,7 @@ export default function ServiceImageFrame({
   alt: string;
 }) {
   return (
-    <div className="relative w-[90%] 2xl:w-3/4 group-odd:order-2 group-even:mr-auto group-odd:ml-auto hidden lg:block">
+    <div className="relative w-[90%] h-fit 2xl:w-3/4 group-odd:order-2 group-even:mr-auto group-odd:ml-auto hidden lg:block">
       <div className="bg-secondary absolute bottom-0 group-odd:right-0 group-even:left-0 group-odd:translate-x-3 group-even:-translate-x-3 translate-y-3 w-[80%] h-[90%]" />
       <div className="relative h-[450px]">
         <Image
