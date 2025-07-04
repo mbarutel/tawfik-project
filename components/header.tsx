@@ -20,13 +20,10 @@ export default function Header() {
             </h3>
           ))}
         </div>
-        <h2 className="text-xl sm:text-2xl xl:text-4xl text-center mt-auto">
-          Integrity. Trust{" "}
-        </h2>
+        <h2 className="text-xl sm:text-2xl xl:text-4xl text-center mt-auto"></h2>
         <h1 className="text-5xl sm:text-6xl xl:text-7xl text-center font-bold uppercase text-secondary my-2 md:my-3 lg:my-4">
           Executive Coaching & Consulting
         </h1>
-        <h2 className="text-xl sm:text-2xl xl:text-4xl text-center">Impact</h2>
         <Link
           href="#services"
           className="button mb-auto mx-auto border-light mt-8"

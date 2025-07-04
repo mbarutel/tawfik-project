@@ -4,7 +4,7 @@ import {
   HomeServices,
   HomeQuotes,
   HomeCta,
-  HomeResources,
+  // HomeResources,
   HomeTestimonials,
 } from "@/sections";
 

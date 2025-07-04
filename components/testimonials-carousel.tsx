@@ -5,8 +5,6 @@ import { usePrevNextButtons } from "@/lib/carousel-utils";
 import { clsx } from "clsx";
 import useEmblaCarousel from "embla-carousel-react";
 import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
-import { IoIosBriefcase } from "react-icons/io";
-import { IoPerson } from "react-icons/io5";
 
 export default function TestimonialsCarousel({
   testimonials,
@@ -33,7 +31,7 @@ export default function TestimonialsCarousel({
             return (
               <div
                 key={index}
-                className="flex-grow-0 flex-shrink-0 w-full lg:w-1/3 cursor-grab active:cursor-grabbing pl-3"
+                className="flex-grow-0 flex-shrink-0 w-full lg:w-1/2 cursor-grab active:cursor-grabbing pl-3"
               >
                 <div className="bg-light/80 rounded-sm h-full text-primary px-6 py-8 flex flex-col shadow-2xl">
                   <p className="mb-4 !text-xl">"{testimonial.testimony}"</p>
@@ -64,14 +62,6 @@ function GetInitials(name: string): string {
   const nameSplit = name.split(" ");
   return `${nameSplit[0][0]}.${nameSplit[nameSplit.length - 1][0]}.`;
 }
-// <h3 className="text-lg mt-auto font-bold flex items-center gap-1">
-//   <IoPerson className="inline-flex" />
-//   {testimonial.name}
-// </h3>
-// <h3 className="text-lg italic font-light flex items-center gap-1">
-//   <IoIosBriefcase className="inline-flex" />
-//   {testimonial.position}
-// </h3>
 
 type PropType = {
   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
