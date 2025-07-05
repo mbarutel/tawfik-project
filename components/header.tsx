@@ -9,7 +9,7 @@ export default function Header() {
       <div className="absolute inset-0 bg-dark/50 z-0" />
 
       {/* Content - Ensure it's above the overlay */}
-      <div className="container relative h-screen md:h-[700px] flex flex-col z-10">
+      <div className="container relative h-screen md:h-[800px] flex flex-col z-10">
         <div className="flex justify-center opacity-80 gap-5 sm:gap-7 md:gap-12 lg:gap-18 xl:gap-24 2xl:gap-28 mt-8">
           {texts.map((text, index) => (
             <h3
