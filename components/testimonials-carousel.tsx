@@ -1,17 +1,23 @@
 "use client";
 
+import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 import { TestimonialType } from "@/contentful/utils/types";
 import { usePrevNextButtons } from "@/lib/carousel-utils";
-import { clsx } from "clsx";
 import useEmblaCarousel from "embla-carousel-react";
-import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
+import Autoplay from "embla-carousel-autoplay";
+import { clsx } from "clsx";
 
 export default function TestimonialsCarousel({
   testimonials,
 }: {
   testimonials: TestimonialType[];
 }) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
+  const options = {
+    loop: true,
+  };
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
+    Autoplay({ stopOnMouseEnter: true, stopOnInteraction: false }),
+  ]);
 
   const {
     prevBtnDisabled,
@@ -31,9 +37,9 @@ export default function TestimonialsCarousel({
             return (
               <div
                 key={index}
-                className="flex-grow-0 flex-shrink-0 w-full lg:w-1/2 cursor-grab active:cursor-grabbing pl-3"
+                className="flex-grow-0 flex-shrink-0 w-full cursor-grab active:cursor-grabbing pl-3"
               >
-                <div className="bg-light/80 rounded-sm h-full text-primary px-6 py-8 flex flex-col shadow-2xl">
+                <div className="bg-light/80 rounded-sm h-full text-primary p-8 flex flex-col shadow-2xl">
                   <p className="mb-4 !text-xl">"{testimonial.testimony}"</p>
                   <p className="italic !text-xl">
                     - {initials}, {testimonial.position}

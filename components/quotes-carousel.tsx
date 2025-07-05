@@ -7,8 +7,8 @@ import { QuoteType } from "@/contentful/utils/types";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 
 export default function QuotesCarousel({ quotes }: { quotes: QuoteType[] }) {
-  const [viewportRef, embla] = useEmblaCarousel({ loop: false }, [
-    Autoplay({ stopOnLastSnap: true, stopOnMouseEnter: true }),
+  const [viewportRef, embla] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ stopOnMouseEnter: true, stopOnInteraction: false }),
   ]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
@@ -40,7 +40,7 @@ export default function QuotesCarousel({ quotes }: { quotes: QuoteType[] }) {
             {quotes.map((_, index) => (
               <div
                 key={index}
-                className="relative flex-[0_0_100%] min-w-0 p-4 md:p-14 h-[350px] lg:h-[450px] flex flex-col justify-center rounded-md cursor-grab active:cursor-grabbing"
+                className="relative flex-[0_0_100%] min-w-0 p-4 md:p-14 h-[250px] lg:h-[350px] flex flex-col justify-center rounded-md cursor-grab active:cursor-grabbing"
               >
                 <h3 className="text-xl md:text-3xl text-center">
                   {quotes[index].quote}
@@ -57,9 +57,8 @@ export default function QuotesCarousel({ quotes }: { quotes: QuoteType[] }) {
         {quotes.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-              index === selectedIndex ? "bg-secondary" : "bg-light"
-            } mx-1.5 cursor-pointer`}
+            className={`w-3 h-3 rounded-full transition-colors duration-300 ${index === selectedIndex ? "bg-secondary" : "bg-light"
+              } mx-1.5 cursor-pointer`}
             type="button"
             onClick={() => scrollTo(index)}
           />

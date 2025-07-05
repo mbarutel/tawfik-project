@@ -28,7 +28,7 @@ export default async function HomeQuotes() {
 
   return (
     <section className="bg-[url('/quotes-bg.webp')] bg-cover">
-      <div className="container mx-auto py-16">
+      <div className="container mx-auto py-14">
         <QuotesCarousel quotes={quotes} />
       </div>
     </section>
