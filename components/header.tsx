@@ -10,11 +10,11 @@ export default function Header() {
 
       {/* Content - Ensure it's above the overlay */}
       <div className="container relative h-screen md:h-[800px] flex flex-col z-10">
-        <div className="flex justify-center opacity-80 gap-5 sm:gap-7 md:gap-12 lg:gap-18 xl:gap-24 2xl:gap-28 mt-8">
+        <div className="flex flex-wrap justify-center opacity-80 gap-x-5 sm:gap-x-7 md:gap-x-12 lg:gap-x-18 xl:gap-x-24 2xl:gap-x-28 mt-8">
           {texts.map((text, index) => (
             <h3
               key={index}
-              className="text-xl sm:text-2xl lg:text-3xl text-center font-thin italic opacity-80"
+              className="text-2xl lg:text-3xl text-center font-thin italic opacity-80"
             >
               {text}
             </h3>
