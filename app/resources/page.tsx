@@ -3,6 +3,20 @@ import {
   ResourcesBooks,
   ResourcesPodcasts,
 } from "@/sections";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Leadership Resources: Articles, Podcasts & Books | Tawfik Executive Coaching & Consulting",
+  description:
+    "Explore our curated collection of leadership articles, executive coaching podcasts, and recommended books to support your leadership development journey.",
+  openGraph: {
+    title: "Resources | Tawfik Executive Coaching & Consulting",
+    description:
+      "Articles, podcasts, and books on leadership development and executive coaching.",
+    url: "https://tawfikecc.com.au/resources",
+  },
+};
 
 export default async function page() {
   return (
