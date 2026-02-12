@@ -5,9 +5,23 @@ import {
   ServicesConsulting,
   ServicesWorkshops,
 } from "@/sections";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
+
+export const metadata: Metadata = {
+  title:
+    "Executive Coaching & Leadership Development Services | Tawfik Executive Coaching & Consulting",
+  description:
+    "Discover our executive coaching, leadership development workshops, and strategic consulting services designed to empower leaders and teams across Melbourne and Australia.",
+  openGraph: {
+    title: "Our Services | Tawfik Executive Coaching & Consulting",
+    description:
+      "Executive coaching, leadership workshops, and strategic consulting for Melbourne businesses.",
+    url: "https://tawfikecc.com.au/services",
+  },
+};
 
 export default async function page() {
   return (
