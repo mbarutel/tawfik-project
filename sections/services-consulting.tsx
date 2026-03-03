@@ -34,9 +34,9 @@ export default function ServicesConsulting() {
         </div>
         <br />
         <p>
-          Our approach is collaborative—we work alongside you to understand your
-          needs, challenge where needed, and co-design practical solutions that
-          deliver lasting impact.
+          Our approach is collaborative, we work alongside you to understand
+          your needs, challenge where needed, and co-design practical solutions
+          that deliver lasting impact.
         </p>
       </div>
     </div>

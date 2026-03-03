@@ -19,11 +19,11 @@ export default function ServicesWorkshops() {
           topics like leading through change, emotional intelligence, or team
           dynamics, our workshops provide tools that leaders can apply
           immediately. We also offer longer-term development programs that build
-          leadership capability over time—designed in partnership with you, and
-          aligned to your organisation’s goals and values. Whether you’re
-          growing new leaders or supporting experienced ones, our workshops
-          create a shared language, build confidence, and strengthen your
-          leadership culture.
+          leadership capability over time, designed in partnership with you and
+          your team's needs, aligned to your organisation’s goals and values.
+          Whether you’re growing new leaders or supporting experienced ones, our
+          workshops create a shared language, build confidence, and strengthen
+          your leadership culture.
         </p>
       </div>
     </div>

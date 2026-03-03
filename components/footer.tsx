@@ -11,7 +11,7 @@ export default function Footer() {
             <Logo />
           </div>
           <p className="!text-[20px] text-sm leading-tight max-w-[60ch]">
-            Great leadership doesn’t happen by chance — it’s an investment with
+            Great leadership doesn’t happen by chance, it’s an investment with
             lasting impact. Explore how executive coaching and consulting can
             make the difference.
           </p>

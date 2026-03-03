@@ -20,7 +20,7 @@ export default function HomeServices() {
               <div className="flex flex-col justify-center group-even:text-left xl:group-even:text-center xl:text-center text-primary">
                 <h3 className="text-4xl mt-6 xl:mt-10">{service.title}</h3>
                 <h4 className="italic text-3xl mb-3">{service.subTitle}</h4>
-                <p className="xl:text-justify">{service.text}</p>
+                <p>{service.text}</p>
                 <Link
                   href="/services"
                   className="xl:hidden italic underline group text-2xl mt-2 text-secondary w-fit"

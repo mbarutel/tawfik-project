@@ -19,9 +19,9 @@ export default function ServicesCoaching() {
           assumptions, and move forward with purpose. Each coaching journey is
           tailored to the individual, with a focus on building self-awareness,
           improving decision-making, and strengthening relationships. We equip
-          leaders with practical tools and frameworks they can use
-          day-to-day—helping them lead more effectively not just during
-          coaching, but well beyond.
+          leaders with practical tools and frameworks they can use day-to-day,
+          helping them lead more effectively not just during coaching, but well
+          beyond.
         </p>
         <br />
         <p>
