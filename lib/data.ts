@@ -11,6 +11,10 @@ export const links = [
     hash: "/#about",
   },
   {
+    name: "Profile",
+    hash: "/profile",
+  },
+  {
     name: "Services",
     hash: "/services",
   },
@@ -101,3 +105,59 @@ export const socials = [
     href: "https://www.linkedin.com/",
   },
 ] as const;
+
+// export const profileData = {
+//
+//
+//   experience: {
+//     intro: "I bring more than 15 years of executive and senior leadership experience, supported by established coaching practice. My career has involved leading large, multidisciplinary teams in demanding settings where leaders must stay calm, make thoughtful choices, and guide others with clarity.",
+//     approach: "My coaching approach draws on trusted frameworks and the belief that leaders already possess significant strengths. My role is to support clearer thinking, deeper insight, and behaviour change that lasts.",
+//   },
+//
+//   workingWith: [
+//     "Strengthen confidence and presence",
+//     "Expand self-understanding and judgement",
+//     "Uncover capability through reflection and accountability",
+//     "Turn new insight into everyday leadership behaviours",
+//   ],
+//
+//   closingStatement: "This combination of hands-on leadership experience and proven coaching helps leaders act with purpose and align their work with what matters most.",
+//
+//   education: [
+//     {
+//       degree: "Bachelor",
+//       field: "Community Welfare and Counselling",
+//     },
+//     {
+//       degree: "Bachelor",
+//       field: "Psychology",
+//     },
+//     {
+//       degree: "Institute of Organisation Coaching and Leadership",
+//       field: "Organisation Coaching Certification Level 1 & 2",
+//     },
+//   ],
+//
+//   skills: [
+//     "Leadership Confidence",
+//     "People Leadership",
+//     "Decision-Making",
+//     "Executive Presence",
+//     "Communication & Influence",
+//     "Role Transition",
+//     "Leading Under Pressure",
+//     "Accountability & Boundaries",
+//     "Self Awareness & Insight",
+//   ],
+//
+//   accreditation: [
+//     "org-coaching-badge-cert-one.png",
+//     "org-coaching-badge-cert-two.png",
+//   ],
+//
+//   contact: {
+//     phone: "+61 435 867 387",
+//     email: "info@tawfikecc.com.au",
+//     website: "www.tawfikecc.com.au",
+//   },
+// } as const;

@@ -12,7 +12,7 @@ export default function ServicesConsulting() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 group items-center">
       <ServiceImageFrame src={service.image.src} alt={service.image.alt} />
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col justify-center text-justify">
         <h2 className="text-4xl lg:text-6xl font-bold mb-3 lg:mb-6">
           {service.title}
         </h2>
@@ -25,13 +25,14 @@ export default function ServicesConsulting() {
         <br />
         <p>We can support you with:</p>
         <br />
-        <div className="list-disc pl-5">
+        <ul className="list-disc pl-5">
           {data.map((val, ind) => (
-            <p key={ind}>
-              <span className="text-2xl">•</span> {val}
-            </p>
+            <li key={ind}>
+              <span className="mr-3 text-primary font-bold">•</span>
+              {val}
+            </li>
           ))}
-        </div>
+        </ul>
         <br />
         <p>
           Our approach is collaborative, we work alongside you to understand

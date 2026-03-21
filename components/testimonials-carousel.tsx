@@ -59,12 +59,12 @@ export default function TestimonialsCarousel({
                 className="flex-grow-0 flex-shrink-0 w-full cursor-grab active:cursor-grabbing pl-3"
               >
                 <div className="bg-light/80 rounded-sm h-full text-primary py-8 px-14 flex flex-col shadow-2xl text-center">
-                  <p className="mb-4 !text-xl mt-auto">
-                    "{testimonial.testimony}"
-                  </p>
-                  <p className="italic !text-xl mb-auto">
-                    - {initials}, {testimonial.position}
-                  </p>
+                  <div className="my-auto">
+                    <p className="mb-4 !text-xl">"{testimonial.testimony}"</p>
+                    <p className="italic !text-xl">
+                      - {initials}, {testimonial.position}
+                    </p>
+                  </div>
                 </div>
               </div>
             );
@@ -85,8 +85,9 @@ export default function TestimonialsCarousel({
         {testimonials.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full transition-colors duration-300 ${index === selectedIndex ? "bg-secondary" : "bg-light"
-              } mx-1.5 cursor-pointer`}
+            className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+              index === selectedIndex ? "bg-secondary" : "bg-light"
+            } mx-1.5 cursor-pointer`}
             type="button"
             onClick={() => scrollTo(index)}
           />

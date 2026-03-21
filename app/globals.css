@@ -49,11 +49,32 @@ section {
 }
 
 p {
-  @apply text-xl 2xl:text-2xl;
+  @apply text-lg 2xl:text-xl leading-[1.5rem] mb-3;
+}
+
+ul {
+  @apply mb-4;
+}
+
+li {
+  @apply text-lg 2xl:text-xl;
+}
+
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+  @apply font-['Montserrat'];
 }
 
 .montserrat {
   @apply font-['Montserrat'];
+}
+
+.garamond {
+  @apply font-['Cormorant_Garamond'];
 }
 
 .button {
@@ -61,7 +82,7 @@ p {
 }
 
 .section_header {
-  @apply underline font-bold text-5xl xl:text-6xl;
+  @apply underline font-bold text-4xl md:text-5xl xl:text-6xl;
 }
 
 .container {

@@ -11,7 +11,7 @@ export default function ServicesCoaching() {
         <h2 className="text-4xl lg:text-6xl font-bold mb-3 lg:mb-6">
           {service.title}
         </h2>
-        <p>
+        <p className="text-justify">
           We offer personalised one-on-one coaching that supports leaders to
           grow in confidence, clarity, and capability. Whether you’re stepping
           into a new role, navigating complexity, or seeking to elevate your

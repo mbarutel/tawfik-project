@@ -37,9 +37,9 @@ export default async function page() {
             <ServicesWorkshops />
             <ServicesConsulting />
           </div>
-          <p className="text-center italic my-6 !text-3xl">
+          <div className="text-center italic my-6 text-3xl">
             Book your time for a free consultation
-          </p>
+          </div>
           <Link
             href="/#contact"
             className="button border-secondary text-secondary mx-auto"

@@ -19,7 +19,9 @@ export default function HomeServices() {
               <ImageFrame src={service.image.src} alt={service.image.alt} />
               <div className="flex flex-col justify-center group-even:text-left xl:group-even:text-center xl:text-center text-primary">
                 <h3 className="text-4xl mt-6 xl:mt-10">{service.title}</h3>
-                <h4 className="italic text-3xl mb-3">{service.subTitle}</h4>
+                <h4 className="italic text-xl 2xl:text-2xl mb-3">
+                  {service.subTitle}
+                </h4>
                 <p>{service.text}</p>
                 <Link
                   href="/services"
@@ -45,7 +47,7 @@ export default function HomeServices() {
 
 function ImageFrame({ src, alt }: { src: string; alt: string }) {
   return (
-    <div className="group-even:order-1 xl:group-even:order-0 relative w-full">
+    <div className="hidden md:block group-even:order-1 xl:group-even:order-0 relative w-full">
       <div className="absolute bg-primary inset-0 -translate-x-2 translate-y-2" />
       <div className="relative h-[450px] w-full xl:translate-x-2 xl:-translate-y-2">
         <Link href="/services" target="_blank" rel="noreferrer">

@@ -28,7 +28,6 @@ function AboutText() {
         situations. We also work closely with teams and organisations, helping
         them lead their people with clarity, connection and resilience.
       </p>
-      <br />
       <p className="text-justify mb-6 md:mb-8">
         Above all, we’re here to support the growth and capability of people,
         leadership and culture. Book your time for a free consultation to learn

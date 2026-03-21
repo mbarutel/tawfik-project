@@ -40,9 +40,9 @@ export default function QuotesCarousel({ quotes }: { quotes: QuoteType[] }) {
             {quotes.map((_, index) => (
               <div
                 key={index}
-                className="relative flex-[0_0_100%] min-w-0 p-4 md:p-14 h-[250px] lg:h-[350px] flex flex-col justify-center rounded-md cursor-grab active:cursor-grabbing"
+                className="relative flex-[0_0_100%] min-w-0 p-4 md:p-14 h-[350px] flex flex-col justify-center rounded-md cursor-grab active:cursor-grabbing"
               >
-                <h3 className="text-xl md:text-3xl text-center">
+                <h3 className="md:text-xl lg:text-3xl text-center">
                   {quotes[index].quote}
                 </h3>
                 <p className="text-sm md:text-lg mt-2 lg:mt-4 text-center italic">
@@ -57,8 +57,9 @@ export default function QuotesCarousel({ quotes }: { quotes: QuoteType[] }) {
         {quotes.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full transition-colors duration-300 ${index === selectedIndex ? "bg-secondary" : "bg-light"
-              } mx-1.5 cursor-pointer`}
+            className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+              index === selectedIndex ? "bg-secondary" : "bg-light"
+            } mx-1.5 cursor-pointer`}
             type="button"
             onClick={() => scrollTo(index)}
           />

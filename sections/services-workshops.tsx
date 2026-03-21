@@ -11,7 +11,7 @@ export default function ServicesWorkshops() {
         <h2 className="text-4xl lg:text-6xl font-bold mb-3 lg:mb-6">
           {service.title}
         </h2>
-        <p>
+        <p className="text-justify">
           Our workshops are designed to build real leadership capability. We
           deliver tailored programs for individuals, teams, and organisations
           that are interactive, practical, and grounded in the real challenges
