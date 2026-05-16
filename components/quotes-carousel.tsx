@@ -42,7 +42,7 @@ export default function QuotesCarousel({ quotes }: { quotes: QuoteType[] }) {
                 key={index}
                 className="relative flex-[0_0_100%] min-w-0 p-4 md:p-14 h-[350px] flex flex-col justify-center rounded-md cursor-grab active:cursor-grabbing"
               >
-                <h3 className="md:text-xl lg:text-3xl text-center">
+                <h3 className="text-sm md:text-xl text-center">
                   {quotes[index].quote}
                 </h3>
                 <p className="text-sm md:text-lg mt-2 lg:mt-4 text-center italic">
