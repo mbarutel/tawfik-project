@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FaEnvelope, FaGlobe, FaPhoneAlt } from "react-icons/fa";
 import { ImQuotesLeft } from "react-icons/im";
 import { IoSchoolSharp } from "react-icons/io5";
+import HomeCta from "./home-cta";
 
 export default function ProfileContent() {
   return (
@@ -14,6 +15,7 @@ export default function ProfileContent() {
         </div>
       </section>
       <ContactSection />
+      <HomeCta />
     </>
   );
 }
