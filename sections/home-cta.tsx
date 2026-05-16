@@ -1,7 +1,12 @@
 "use client";
-import { InlineWidget } from "react-calendly";
+import dynamic from "next/dynamic";
 import { BiSolidChevronRightSquare } from "react-icons/bi";
 import Link from "next/link";
+
+const InlineWidget = dynamic(
+  () => import("react-calendly").then((mod) => mod.InlineWidget),
+  { ssr: false }
+);
 
 export default function HomeCta() {
   return (

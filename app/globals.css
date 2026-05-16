@@ -25,10 +25,6 @@
 /*   font-family: Arial, Helvetica, sans-serif; */
 /* } */
 
-/* .cormorant { */
-/*   font-family: var(--font-cormorant-garamond); */
-/* } */
-
 @theme {
   --color-primary: oklch(35.84% 0.0519 197);
   --color-secondary: oklch(77.63% 0.0906 79.72);
@@ -39,7 +35,7 @@
 }
 
 body {
-  font-family: var(--font-cormorant-garamond), serif;
+  font-family: var(--font-montserrat), sans-serif;
   background: var(--color-primary);
   color: var(--color-light);
 }
@@ -49,15 +45,11 @@ section {
 }
 
 p {
-  @apply text-lg 2xl:text-xl leading-[1.5rem] mb-3;
+  @apply leading-[1.5rem] mb-3;
 }
 
 ul {
   @apply mb-4;
-}
-
-li {
-  @apply text-lg 2xl:text-xl;
 }
 
 h6,
@@ -73,9 +65,6 @@ h1 {
   @apply font-['Montserrat'];
 }
 
-.garamond {
-  @apply font-['Cormorant_Garamond'];
-}
 
 .button {
   @apply px-4 py-1 border-1 font-['Montserrat'] text-lg xl:text-xl 2xl:text-2xl font-light uppercase hover:scale-105 active:scale-95 transition inline-block;

@@ -1,86 +1,65 @@
 "use client";
 
-import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
-import { TestimonialType } from "@/contentful/utils/types";
-import { usePrevNextButtons } from "@/lib/carousel-utils";
-import useEmblaCarousel from "embla-carousel-react";
+import { useState, useEffect, useCallback } from "react";
 import Autoplay from "embla-carousel-autoplay";
-import { clsx } from "clsx";
-import { useCallback, useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import { TestimonialType } from "@/contentful/utils/types";
+import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 
 export default function TestimonialsCarousel({
   testimonials,
 }: {
   testimonials: TestimonialType[];
 }) {
-  const options = {
-    loop: true,
-  };
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
+  const [viewportRef, embla] = useEmblaCarousel({ loop: true }, [
     Autoplay({ stopOnMouseEnter: true, stopOnInteraction: false }),
   ]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+
   const scrollTo = useCallback(
-    (index: number) => emblaApi && emblaApi.scrollTo(index),
-    [emblaApi],
+    (index: number) => embla && embla.scrollTo(index),
+    [embla],
   );
 
-  // const {
-  //   prevBtnDisabled,
-  //   nextBtnDisabled,
-  //   onPrevButtonClick,
-  //   onNextButtonClick,
-  // } = usePrevNextButtons(emblaApi);
-
   const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi, setSelectedIndex]);
+    if (!embla) return;
+    setSelectedIndex(embla.selectedScrollSnap());
+  }, [embla, setSelectedIndex]);
 
   useEffect(() => {
-    if (!emblaApi) return;
+    if (!embla) return;
     onSelect();
-    setScrollSnaps(emblaApi.scrollSnapList());
-    emblaApi.on("select", onSelect);
-  }, [emblaApi, setScrollSnaps, onSelect]);
+    setScrollSnaps(embla.scrollSnapList());
+    embla.on("select", onSelect);
+  }, [embla, setScrollSnaps, onSelect]);
 
   return (
-    <div className="bg-primary/90 rounded-sm py-18 px-18">
-      <h2 className="section_header text-center !no-underline">Testimonials</h2>
-      <div className="overflow-hidden relative my-6" ref={emblaRef}>
-        <div className="flex -ml-3">
-          {testimonials.map((testimonial, index) => {
-            const initials = GetInitials(testimonial.name);
-
-            return (
-              <div
-                key={index}
-                className="flex-grow-0 flex-shrink-0 w-full cursor-grab active:cursor-grabbing pl-3"
-              >
-                <div className="bg-light/80 rounded-sm h-full text-primary py-8 px-14 flex flex-col shadow-2xl text-center">
-                  <div className="my-auto">
-                    <p className="mb-4 !text-xl">"{testimonial.testimony}"</p>
-                    <p className="italic !text-xl">
-                      - {initials}, {testimonial.position}
-                    </p>
-                  </div>
+    <>
+      <div className="relative mx-auto my-auto bg-primary/80 rounded-md">
+        <RiDoubleQuotesL className="absolute text-4xl xl:text-6xl top-10 left-10 opacity-70" />
+        <RiDoubleQuotesR className="absolute text-4xl xl:text-6xl bottom-10 right-10 opacity-70" />
+        <div className="overflow-hidden" ref={viewportRef}>
+          <div className="flex">
+            {testimonials.map((testimonial, index) => {
+              const initials = getInitials(testimonial.name);
+              return (
+                <div
+                  key={index}
+                  className="relative flex-[0_0_100%] min-w-0 p-4 md:p-14 h-[350px] flex flex-col justify-center rounded-md cursor-grab active:cursor-grabbing"
+                >
+                  <h3 className="md:text-xl lg:text-3xl text-center">
+                    {testimonial.testimony}
+                  </h3>
+                  <p className="text-sm md:text-lg mt-2 lg:mt-4 text-center italic">
+                    — {initials}, {testimonial.position}
+                  </p>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
-      {/* <div className="flex gap-3 justify-center"> */}
-      {/*   <PrevButton */}
-      {/*     onClick={() => onPrevButtonClick()} */}
-      {/*     disabled={prevBtnDisabled} */}
-      {/*   /> */}
-      {/*   <NextButton */}
-      {/*     onClick={() => onNextButtonClick()} */}
-      {/*     disabled={nextBtnDisabled} */}
-      {/*   /> */}
-      {/* </div> */}
       <div className="flex justify-center pt-6">
         {testimonials.map((_, index) => (
           <button
@@ -93,46 +72,11 @@ export default function TestimonialsCarousel({
           />
         ))}
       </div>
-    </div>
+    </>
   );
 }
 
-function GetInitials(name: string): string {
-  const nameSplit = name.split(" ");
-  return `${nameSplit[0][0]}.${nameSplit[nameSplit.length - 1][0]}.`;
+function getInitials(name: string): string {
+  const parts = name.split(" ");
+  return `${parts[0][0]}.${parts[parts.length - 1][0]}.`;
 }
-
-// type PropType = {
-//   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
-//   disabled: boolean;
-// };
-
-// function PrevButton({ onClick, disabled }: PropType) {
-//   return (
-//     <button
-//       type="button"
-//       onClick={onClick}
-//       disabled={disabled}
-//       className={clsx("text-4xl transition", {
-//         "opacity-80 cursor-not-allowed": disabled,
-//       })}
-//     >
-//       <FaCircleChevronLeft />
-//     </button>
-//   );
-// }
-//
-// function NextButton({ onClick, disabled }: PropType) {
-//   return (
-//     <button
-//       type="button"
-//       onClick={onClick}
-//       disabled={disabled}
-//       className={clsx("text-4xl transition", {
-//         "opacity-80 cursor-not-allowed": disabled,
-//       })}
-//     >
-//       <FaCircleChevronRight />
-//     </button>
-//   );
-// }

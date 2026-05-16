@@ -88,7 +88,7 @@ function Banners() {
       <div>
         <div className="grid grid-cols-4 text-center justify-center text-white py-16 px-10">
           <div>
-            <h4 className="font-bold text-6xl garamond">15+</h4>
+            <h4 className="font-bold text-6xl">15+</h4>
             <p className="font-semibold">YEARS</p>
             <p>
               of executive & senior

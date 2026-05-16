@@ -8,7 +8,7 @@ export default function ServicesCoaching() {
     <div className="grid grid-cols-1 lg:grid-cols-2 group items-center">
       <ServiceImageFrame src={service.image.src} alt={service.image.alt} />
       <div className="flex flex-col justify-center">
-        <h2 className="text-4xl lg:text-6xl font-bold mb-3 lg:mb-6">
+        <h2 className="text-4xl lg:text-6xl font-bold mb-3 lg:mb-6 text-secondary">
           {service.title}
         </h2>
         <p className="text-justify">
