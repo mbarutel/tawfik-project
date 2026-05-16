@@ -10,7 +10,6 @@ import HomeTestimonials from "./home-testimonials";
 import ServicesCoaching from "./services-coaching";
 import ServicesWorkshops from "./services-workshops";
 import ServicesConsulting from "./services-consulting";
-import ProfileSidebar from "./profile-sidebar";
 import ProfileContent from "./profile-content";
 
 export {
@@ -26,6 +25,5 @@ export {
   ServicesCoaching,
   ServicesWorkshops,
   ServicesConsulting,
-  ProfileSidebar,
   ProfileContent,
 };

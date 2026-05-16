@@ -5,12 +5,12 @@ import Logo from "./logo";
 export default function Footer() {
   return (
     <footer className="bg-dark relative py-14 lg:py-20 2xl:py-28">
-      <div className="container flex justify-center md:justify-between">
-        <div className="hidden md:flex flex-col justify-between">
+      <div className="container flex justify-center md:justify-between text-sm ">
+        <div className="hidden md:flex flex-col gap-6">
           <div className="text-secondary flex items-center">
             <Logo />
           </div>
-          <p className="!text-[20px] text-sm leading-tight max-w-[60ch]">
+          <p className="leading-tight max-w-[60ch]">
             Great leadership doesn’t happen by chance, it’s an investment with
             lasting impact. Explore how executive coaching and consulting can
             make the difference.
@@ -21,9 +21,9 @@ export default function Footer() {
             {links.map((link, index) => (
               <li
                 key={index}
-                className="mb-0.5 hover:text-secondary transition active:scale-95"
+                className="hover:text-secondary transition active:scale-95"
               >
-                <Link href={link.hash} className="montserrat">
+                <Link href={link.hash} className="text-base">
                   {link.name}
                 </Link>
               </li>

@@ -13,7 +13,7 @@ export default function ServicesConsulting() {
     <div className="grid grid-cols-1 lg:grid-cols-2 group items-center">
       <ServiceImageFrame src={service.image.src} alt={service.image.alt} />
       <div className="flex flex-col justify-center text-justify">
-        <h2 className="text-4xl lg:text-6xl font-bold mb-3 lg:mb-6">
+        <h2 className="text-4xl lg:text-6xl font-bold mb-3 lg:mb-6 text-secondary">
           {service.title}
         </h2>
         <p>
@@ -27,8 +27,7 @@ export default function ServicesConsulting() {
         <br />
         <ul className="list-disc pl-5">
           {data.map((val, ind) => (
-            <li key={ind}>
-              <span className="mr-3 text-primary font-bold">•</span>
+            <li key={ind} className="text-base">
               {val}
             </li>
           ))}
