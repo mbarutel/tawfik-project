@@ -7,11 +7,11 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Leadership Resources: Articles, Podcasts & Books | Tawfik Executive Coaching & Consulting",
+    "Leadership Resources: Articles, Podcasts & Books | Tawfik Executive Coaching",
   description:
     "Explore our curated collection of leadership articles, executive coaching podcasts, and recommended books to support your leadership development journey.",
   openGraph: {
-    title: "Resources | Tawfik Executive Coaching & Consulting",
+    title: "Resources | Tawfik Executive Coaching",
     description:
       "Articles, podcasts, and books on leadership development and executive coaching.",
     url: "https://tawfikecc.com.au/resources",

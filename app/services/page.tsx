@@ -1,50 +1,59 @@
 import { Header } from "@/components";
 import { services } from "@/lib/data";
-import {
-  ServicesCoaching,
-  ServicesConsulting,
-  ServicesWorkshops,
-} from "@/sections";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Fragment } from "react";
 
 export const metadata: Metadata = {
   title:
-    "Executive Coaching & Leadership Development Services | Tawfik Executive Coaching & Consulting",
+    "Services | Tawfik Executive Coaching",
   description:
-    "Discover our executive coaching, leadership development workshops, and strategic consulting services designed to empower leaders and teams across Melbourne and Australia.",
+    "Explore executive coaching, emerging leader coaching and team workshops for practical, evidence-based leadership development.",
   openGraph: {
-    title: "Our Services | Tawfik Executive Coaching & Consulting",
+    title: "Our Services | Tawfik Executive Coaching",
     description:
-      "Executive coaching, leadership workshops, and strategic consulting for Melbourne businesses.",
+      "Executive coaching, emerging leader coaching and team workshops across Melbourne, Gippsland and Australia.",
     url: "https://tawfikecc.com.au/services",
   },
 };
 
-export default async function page() {
+export default function ServicesPage() {
   return (
     <>
       <Header />
-      <section id="services">
-        <div className="container flex flex-col">
-          <h2 className="section_header decoration-primary text-center">
-            OUR SERVICES
-          </h2>
-          <div className="flex flex-col gap-12 lg:gap-24 my-12 lg:my-24">
-            <ServicesCoaching />
-            <ServicesWorkshops />
-            <ServicesConsulting />
+      <section id="services" className="bg-light text-primary">
+        <div className="container flex flex-col items-center">
+          <h1 className="section_header decoration-secondary text-center">
+            Three Ways to Work Together
+          </h1>
+          <p className="max-w-3xl text-center text-lg mt-6 mb-12">
+            One-on-one coaching, coaching for leaders early in the journey, and
+            workshops that lift a whole team. All of it practical, all of it
+            built around your context, and all of it grounded in evidence-based
+            coaching practice.
+          </p>
+          <div className="grid gap-8 md:grid-cols-3">
+            {services.map((service) => (
+              <article key={service.link} className="flex flex-col border border-primary/20 p-5">
+                <div className="relative h-64">
+                  <Image
+                    src={service.image.src}
+                    alt={service.image.alt}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <h2 className="text-3xl mt-6">{service.title}</h2>
+                <h3 className="italic text-xl mt-1">{service.subTitle}</h3>
+                <p className="mt-3">{service.text}</p>
+                <Link href={service.link} className="mt-auto pt-5 text-secondary underline text-lg">
+                  Learn more
+                </Link>
+              </article>
+            ))}
           </div>
-          <div className="text-center italic my-6 text-3xl">
-            Book your time for a free consultation
-          </div>
-          <Link
-            href="/#contact"
-            className="button border-secondary text-secondary mx-auto"
-          >
-            Book Now
+          <Link href="/#contact" className="button border-primary mt-12">
+            Book a free 30-minute chat
           </Link>
         </div>
       </section>

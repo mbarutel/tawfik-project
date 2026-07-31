@@ -1,7 +1,11 @@
 import Link from "next/link";
 
 export default function Header() {
-  const texts = ["Executive Coaching", "Workshops", "Consulting"];
+  const texts = [
+    "Executive Coaching",
+    "Emerging Leaders",
+    "Team Workshops",
+  ];
 
   return (
     <header className="relative bg-[url('/header-bg.webp')] bg-cover bg-center">
@@ -20,15 +24,18 @@ export default function Header() {
             </h3>
           ))}
         </div>
-        <h2 className="text-xl sm:text-2xl xl:text-4xl text-center mt-auto"></h2>
-        <h1 className="text-5xl sm:text-6xl xl:text-7xl text-center font-bold uppercase text-secondary my-2 md:my-3 lg:my-4">
-          Tawfik Executive Coaching & Consulting
+        <h1 className="text-5xl sm:text-6xl xl:text-7xl text-center font-bold text-secondary my-2 md:my-3 lg:my-4">
+          Putting strengths already there to work.
         </h1>
+        <p className="text-xl sm:text-2xl xl:text-4xl text-center max-w-5xl mx-auto">
+          Executive coaching and team workshops for people stepping up — new
+          leaders, emerging leaders, and the ones already carrying the load.
+        </p>
         <Link
-          href="#services"
+          href="#contact"
           className="button mb-auto mx-auto border-light mt-8"
         >
-          Our Services
+          Book a free 30-minute chat
         </Link>
       </div>
     </header>

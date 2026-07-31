@@ -6,10 +6,11 @@ import HomeCta from "./home-cta";
 import HomeQuotes from "./home-quotes";
 import HomeResources from "./home-resources";
 import HomeServices from "./home-services";
+import HomeGrounded from "./home-grounded";
+import HomeAudience from "./home-audience";
 import HomeTestimonials from "./home-testimonials";
 import ServicesCoaching from "./services-coaching";
 import ServicesWorkshops from "./services-workshops";
-import ServicesConsulting from "./services-consulting";
 import ProfileContent from "./profile-content";
 
 export {
@@ -21,9 +22,10 @@ export {
   HomeQuotes,
   HomeResources,
   HomeServices,
+  HomeGrounded,
+  HomeAudience,
   HomeTestimonials,
   ServicesCoaching,
   ServicesWorkshops,
-  ServicesConsulting,
   ProfileContent,
 };

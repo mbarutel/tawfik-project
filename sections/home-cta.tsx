@@ -14,16 +14,16 @@ export default function HomeCta() {
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-6 md:px-12">
         <div className="text-center lg:text-left text-primary">
           <h2 className="section_header decoration-light">
-            Start Your Journey
+            Start with a Conversation
           </h2>
           <h3 className="text-4xl text-secondary mt-2">
-            Book a 30-min Consultation
+            Book a free 30-minute call
           </h3>
           <p className="my-4 leading-relaxed w-full mx-auto">
-            Interested in working together or learning more? Book a free
-            30-minute consultation to explore how we can support your leadership
-            journey. You can also reach us directly via phone or email to start
-            the conversation.
+            Book a free 30-minute call. No pitch, no obligation. We&apos;ll talk
+            about what&apos;s going on, what you&apos;re aiming for, and whether
+            coaching is the right fit. If it isn&apos;t, I&apos;ll say so and point
+            you somewhere better.
           </p>
           <p className="flex items-center gap-1 justify-center lg:justify-start">
             <BiSolidChevronRightSquare className="inline-flex text-secondary" />
@@ -32,7 +32,7 @@ export default function HomeCta() {
               href="tel:0435867387"
               className="hover:underline hover:text-secondary transition"
             >
-              0435867387
+              0435 867 387
             </Link>
           </p>
           <p className="flex items-center gap-1 justify-center lg:justify-start">
