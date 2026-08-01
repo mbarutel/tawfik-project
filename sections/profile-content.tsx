@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { FaEnvelope, FaGlobe, FaPhoneAlt } from "react-icons/fa";
-import { ImQuotesLeft } from "react-icons/im";
 import { IoSchoolSharp } from "react-icons/io5";
 import HomeCta from "./home-cta";
 
@@ -51,147 +50,48 @@ function TitleBanner() {
             years of executive and senior leadership experience.
           </p>
           <div className="bg-light text-primary text-sm p-8 rounded-sm text-center">
-            <p>
-              As a Senior Leader and Executive Coach, I focus on{" "}
-              <span className="font-bold">enhancing leadership</span>{" "}
-              capabilities in their early stages. I collaborate with
-              organisations to cultivate{" "}
-              <span className="font-bold">confident and capable leaders</span>{" "}
-              during transitional periods, before performance, personnel, or
-              cultural challenges arise.
-            </p>
-            <p>
-              My approach emphasises early intervention, practical leadership
-              development, and equipping leaders with the necessary skills to
-              effectively guide their teams in complex environments.
-            </p>
-
-            <div className="mt-6">
-              <div className="grid md:grid-cols-4 text-center justify-center">
-                <div className="pt-2 border-r-2 border-secondary/80 hidden md:block">
-                  <h4 className="font-bold text-4xl">15+</h4>
-                  <p className="font-semibold">YEARS</p>
-                  <p>
-                    of executive & senior
-                    <br />
-                    leadership experience
-                  </p>
+            <div className="grid md:grid-cols-4 text-center justify-center">
+              <div className="pt-2 border-r-2 border-secondary/80 hidden md:block">
+                <h4 className="font-bold text-4xl">15+</h4>
+                <p className="font-semibold">YEARS</p>
+                <p>
+                  of executive & senior
+                  <br />
+                  leadership experience
+                </p>
+              </div>
+              <div className="pt-2 border-r-2 border-secondary/80 hidden md:block">
+                <IoSchoolSharp className="text-4xl mx-auto" />
+                <p className="font-semibold">BACHELOR</p>
+                <p>{">"} Community Welfare & Counselling</p>
+              </div>
+              <div className="pt-2 border-r-2 border-secondary/80 hidden md:block">
+                <IoSchoolSharp className="text-4xl mx-auto" />
+                <p className="font-semibold">BACHELOR</p>
+                <p>{">"} Psychology</p>
+              </div>
+              <div>
+                <div className="flex gap-3 justify-center">
+                  {accreditation.map((item, index) => (
+                    <div key={index} className="relative w-[60px] h-[60px]">
+                      <Image
+                        src={`/${item}`}
+                        alt="accreditation"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover"
+                      />
+                    </div>
+                  ))}
                 </div>
-                <div className="pt-2 border-r-2 border-secondary/80 hidden md:block">
-                  <IoSchoolSharp className="text-4xl mx-auto" />
-                  <p className="font-semibold">BACHELOR</p>
-                  <p>{">"} Community Welfare & Counselling</p>
-                </div>
-                <div className="pt-2 border-r-2 border-secondary/80 hidden md:block">
-                  <IoSchoolSharp className="text-4xl mx-auto" />
-                  <p className="font-semibold">BACHELOR</p>
-                  <p>{">"} Psychology</p>
-                </div>
-                <div>
-                  <div className="flex gap-3 justify-center">
-                    {accreditation.map((item, index) => (
-                      <div key={index} className="relative w-[60px] h-[60px]">
-                        <Image
-                          src={`/${item}`}
-                          alt="accreditation"
-                          fill
-                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                          className="object-cover"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                  <p className="font-semibold mt-1">COACHING CERTIFICATES</p>
-                    <p>
-                      {">"} Organisation Coaching
-                    <br />
-                    Level 1 & 2
-                  </p>
-                </div>
+                <p className="font-semibold mt-1">COACHING CERTIFICATES</p>
+                <p>
+                  {">"} Organisation Coaching
+                  <br />
+                  Level 1 & 2
+                </p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Quote() {
-  return (
-    <section>
-      <div className="container text-primary text-center">
-        <div className="bg-light p-6 xl:p-20 flex flex-col items-center montserrat ">
-          <ImQuotesLeft className="mb-6 text-2xl" />
-          <p className="!mb-8 last:mb-0 max-w-4xl">
-            As a Senior Leader and Executive Coach,
-            <br />I focus on{" "}
-            <span className="font-bold">enhancing leadership</span> capabilities
-            in their early stages. I collaborate with organisations to cultivate{" "}
-            <span className="font-bold">confident and capable leaders</span>{" "}
-            during transitional periods, before performance, personnel, or
-            cultural challenges arise.
-          </p>
-          <p className="max-w-4xl">
-            My approach emphasises early intervention, practical leadership
-            development, and equipping leaders with the necessary skills to
-            effectively guide their teams in complex environments.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Banners() {
-  const accreditation = [
-    "org-coaching-badge-cert-one.png",
-    "org-coaching-badge-cert-two.png",
-  ];
-
-  return (
-    <section>
-      <div>
-        <div className="grid grid-cols-4 text-center justify-center text-white py-16 px-10">
-          <div>
-            <h4 className="font-bold text-6xl">15+</h4>
-            <p className="font-semibold">YEARS</p>
-            <p>
-              of executive & senior
-              <br />
-              leadership experience
-            </p>
-          </div>
-          <div>
-            <IoSchoolSharp className="text-6xl mx-auto" />
-            <p className="font-semibold">BACHELOR</p>
-            <p>{">"} Community Welfare & Counselling</p>
-          </div>
-          <div>
-            <IoSchoolSharp className="text-6xl mx-auto" />
-            <p className="font-semibold">BACHELOR</p>
-            <p>{">"} Psychology</p>
-          </div>
-          <div>
-            <div className="flex gap-3 justify-center">
-              {accreditation.map((item, index) => (
-                <div key={index} className="relative w-[60px] h-[60px]">
-                  <Image
-                    src={`/${item}`}
-                    alt="accreditation"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-            <p className="font-semibold">COACHING CERTIFICATES</p>
-            <p>
-              {">"} Organisation Coaching
-              <br />
-              Level 1 & 2
-            </p>
           </div>
         </div>
       </div>

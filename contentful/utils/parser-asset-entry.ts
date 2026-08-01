@@ -9,7 +9,7 @@ export default function parserAssetEntry({
   if (!asset || !("fields" in asset)) {
     return {
       src: "/resources.webp",
-      alt: "Executive Consultation Australia",
+      alt: "Tawfik Executive Coaching resource",
     };
   }
 

@@ -1,11 +1,15 @@
+import Link from "next/link";
+
 type ServicePageHeroProps = {
   title: string;
   subtitle: string;
+  showCta?: boolean;
 };
 
 export default function ServicePageHero({
   title,
   subtitle,
+  showCta = false,
 }: ServicePageHeroProps) {
   return (
     <section className="bg-primary py-20 md:py-28">
@@ -19,6 +23,11 @@ export default function ServicePageHero({
         <p className="mt-6 max-w-2xl text-2xl leading-relaxed text-light/90">
           {subtitle}
         </p>
+        {showCta && (
+          <Link href="/#contact" className="button border-light mt-8">
+            Book a free 30-minute chat
+          </Link>
+        )}
       </div>
     </section>
   );

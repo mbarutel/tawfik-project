@@ -24,7 +24,7 @@ function AboutText() {
         That&apos;s the work here.
       </p>
       <p className="text-justify">
-        Tawfik Executive Coaching and Consulting supports new and emerging
+        Tawfik Executive Coaching supports new and emerging
         leaders and the teams around them to build capability that lasts longer
         than a single conversation. The coaching is practical. You leave with
         something you can use on Monday: a way into the conversation you&apos;ve
@@ -37,6 +37,9 @@ function AboutText() {
         are already there. My job is to help you find them, name them, and use
         them on purpose.
       </p>
+      <blockquote className="border-l-4 border-secondary pl-5 my-6 text-2xl italic">
+        Healthy organisations outperform smart ones over time.
+      </blockquote>
       <Link
         href="#contact"
         className="button border-secondary text-secondary mt-3"

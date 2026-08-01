@@ -28,6 +28,7 @@ export default function EmergingLeadersPage() {
       <ServicePageHero
         title="Coaching for Emerging & New Leaders"
         subtitle="Making the step up stick with practical tools, honest reflection and habits that hold up in a busy week."
+        showCta
       />
       <main className="bg-light text-primary">
         <section className="py-20 md:py-24">

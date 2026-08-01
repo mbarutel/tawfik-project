@@ -36,6 +36,7 @@ export default function TeamWorkshopsPage() {
       <ServicePageHero
         title="Team Workshops"
         subtitle="Structured conversations that help teams build trust, alignment and a shared way of working."
+        showCta
       />
       <main className="bg-light text-primary">
         <section className="py-20 md:py-24">
