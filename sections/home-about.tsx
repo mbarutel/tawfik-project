@@ -17,8 +17,8 @@ function AboutText() {
     <div className="my-auto">
       <h2 className="section_header decoration-secondary">ABOUT</h2>
       <p className="mt-4 md:mt-6 text-justify">
-        Most leaders don&apos;t need fixing. They need room to think, a few tools
-        that actually work, and someone who will ask the harder question.
+        Most leaders don&apos;t need fixing. They need room to think, a few
+        tools that actually work, and someone who will ask the harder question.
         <br />
         <br />
         That&apos;s the work here.
@@ -31,13 +31,16 @@ function AboutText() {
         been avoiding, a clearer read on your own patterns, a decision you can
         stand behind.
       </p>
-      <p className="text-justify mb-6 md:mb-8">
+      <p className="text-justify">
         It&apos;s grounded in accredited, evidence-based coaching practice and
         tested frameworks. And it starts from a simple belief: your strengths
         are already there. My job is to help you find them, name them, and use
         them on purpose.
       </p>
-      <Link href="#contact" className="button border-secondary text-secondary">
+      <Link
+        href="#contact"
+        className="button border-secondary text-secondary mt-3"
+      >
         Book a free 30-minute chat
       </Link>
     </div>
