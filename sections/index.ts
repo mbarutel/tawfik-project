@@ -6,8 +6,7 @@ import HomeCta from "./home-cta";
 import HomeQuotes from "./home-quotes";
 import HomeResources from "./home-resources";
 import HomeServices from "./home-services";
-import HomeGrounded from "./home-grounded";
-import HomeAudience from "./home-audience";
+import HomeGroundedAudience from "./home-grounded-audience";
 import HomeTestimonials from "./home-testimonials";
 import ServicesCoaching from "./services-coaching";
 import ServicesWorkshops from "./services-workshops";
@@ -22,8 +21,7 @@ export {
   HomeQuotes,
   HomeResources,
   HomeServices,
-  HomeGrounded,
-  HomeAudience,
+  HomeGroundedAudience,
   HomeTestimonials,
   ServicesCoaching,
   ServicesWorkshops,
