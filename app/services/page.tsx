@@ -1,8 +1,9 @@
-import { Header } from "@/components";
+import { ServicePageHero } from "@/components";
 import { services } from "@/lib/data";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { BsArrowRight } from "react-icons/bs";
 
 export const metadata: Metadata = {
   title:
@@ -20,43 +21,54 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <Header />
-      <section id="services" className="bg-light text-primary">
-        <div className="container flex flex-col items-center">
-          <h1 className="section_header decoration-secondary text-center">
-            Three Ways to Work Together
-          </h1>
-          <p className="max-w-3xl text-center text-lg mt-6 mb-12">
-            One-on-one coaching, coaching for leaders early in the journey, and
-            workshops that lift a whole team. All of it practical, all of it
-            built around your context, and all of it grounded in evidence-based
-            coaching practice.
-          </p>
-          <div className="grid gap-8 md:grid-cols-3">
-            {services.map((service) => (
-              <article key={service.link} className="flex flex-col border border-primary/20 p-5">
-                <div className="relative h-64">
-                  <Image
-                    src={service.image.src}
-                    alt={service.image.alt}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <h2 className="text-3xl mt-6">{service.title}</h2>
-                <h3 className="italic text-xl mt-1">{service.subTitle}</h3>
-                <p className="mt-3">{service.text}</p>
-                <Link href={service.link} className="mt-auto pt-5 text-secondary underline text-lg">
-                  Learn more
-                </Link>
-              </article>
-            ))}
+      <ServicePageHero
+        title="Three Ways to Work Together"
+        subtitle="One-on-one coaching, coaching for leaders early in the journey, and workshops that lift a whole team — practical, tailored, and grounded in evidence-based practice."
+      />
+      <main className="bg-light text-primary">
+        <section id="services" className="py-20 md:py-24">
+          <div className="container max-w-6xl">
+            <div className="grid gap-x-8 gap-y-14 md:grid-cols-3">
+              {services.map((service) => (
+                <article key={service.link} className="group flex flex-col">
+                  <Link
+                    href={service.link}
+                    className="relative block h-64 overflow-hidden"
+                  >
+                    <Image
+                      src={service.image.src}
+                      alt={service.image.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover transition duration-500 group-hover:scale-105"
+                    />
+                  </Link>
+                  <div className="h-1 w-10 bg-secondary mt-6" />
+                  <h2 className="text-2xl font-semibold mt-4">
+                    {service.title}
+                  </h2>
+                  <h3 className="italic text-secondary mt-1">
+                    {service.subTitle}
+                  </h3>
+                  <p className="mt-3 leading-7">{service.text}</p>
+                  <Link
+                    href={service.link}
+                    className="inline-flex items-center gap-2 mt-4 text-secondary underline underline-offset-4 w-fit"
+                  >
+                    Learn more
+                    <BsArrowRight className="transition group-hover:translate-x-1" />
+                  </Link>
+                </article>
+              ))}
+            </div>
+            <div className="flex justify-center">
+              <Link href="/#contact" className="button border-primary mt-16">
+                Book a free 30-minute chat
+              </Link>
+            </div>
           </div>
-          <Link href="/#contact" className="button border-primary mt-12">
-            Book a free 30-minute chat
-          </Link>
-        </div>
-      </section>
+        </section>
+      </main>
     </>
   );
 }

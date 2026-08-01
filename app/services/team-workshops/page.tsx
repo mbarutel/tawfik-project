@@ -1,4 +1,5 @@
-import { ServicePageHero } from "@/components";
+import { ServiceImageFrame, ServicePageHero } from "@/components";
+import { services } from "@/lib/data";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -38,38 +39,44 @@ export default function TeamWorkshopsPage() {
       />
       <main className="bg-light text-primary">
         <section className="py-20 md:py-24">
-          <div className="container max-w-5xl">
-            <div className="max-w-3xl text-lg leading-8">
-              <h2 className="text-3xl font-semibold mb-4">The Workshop Conversation</h2>
-              <p>
-                Most teams already know what&apos;s wrong. They just haven&apos;t
-                said it in the same room, at the same time, with someone there
-                to keep it safe.
-              </p>
-              <p>
-                A workshop is a structured version of that conversation.
-                Depending on what your team needs, it might focus on trust,
-                whether people can disagree, admit a mistake or raise a risk
-                without first working out what it&apos;ll cost them. It might be
-                about how the team makes decisions, and whether anything
-                actually happens once the meeting ends. It might be taking
-                values off the wall and turning them into behaviours people can
-                hold each other to on a Tuesday when someone&apos;s dropped the
-                ball. Often, it&apos;s simpler than any of that: building a shared
-                language, so &quot;urgent&quot;, &quot;done&quot; and &quot;I&apos;ll take that on&quot; mean
-                the same thing to everyone in the room.
-              </p>
-              <p>
-                What it isn&apos;t is a day out with butcher&apos;s paper. Each
-                session is designed around your team specifically, built on what
-                surfaces in confidential pre-work rather than what leadership
-                assumes is going on. The day is paced so the harder conversation
-                has somewhere to go.
-              </p>
-              <p>
-                Half day, full day, or a series of shorter sessions. Works best
-                with teams of six to fifteen.
-              </p>
+          <div className="container max-w-6xl">
+            <div className="group lg:grid lg:grid-cols-2 lg:gap-x-12 lg:items-center">
+              <div className="max-w-3xl text-lg leading-8">
+                <h2 className="text-3xl font-semibold mb-4">The Workshop Conversation</h2>
+                <p>
+                  Most teams already know what&apos;s wrong. They just haven&apos;t
+                  said it in the same room, at the same time, with someone there
+                  to keep it safe.
+                </p>
+                <p>
+                  A workshop is a structured version of that conversation.
+                  Depending on what your team needs, it might focus on trust,
+                  whether people can disagree, admit a mistake or raise a risk
+                  without first working out what it&apos;ll cost them. It might be
+                  about how the team makes decisions, and whether anything
+                  actually happens once the meeting ends. It might be taking
+                  values off the wall and turning them into behaviours people can
+                  hold each other to on a Tuesday when someone&apos;s dropped the
+                  ball. Often, it&apos;s simpler than any of that: building a shared
+                  language, so &quot;urgent&quot;, &quot;done&quot; and &quot;I&apos;ll take that on&quot; mean
+                  the same thing to everyone in the room.
+                </p>
+                <p>
+                  What it isn&apos;t is a day out with butcher&apos;s paper. Each
+                  session is designed around your team specifically, built on what
+                  surfaces in confidential pre-work rather than what leadership
+                  assumes is going on. The day is paced so the harder conversation
+                  has somewhere to go.
+                </p>
+                <p>
+                  Half day, full day, or a series of shorter sessions. Works best
+                  with teams of six to fifteen.
+                </p>
+              </div>
+              <ServiceImageFrame
+                src={services[2].image.src}
+                alt={services[2].image.alt}
+              />
             </div>
           </div>
         </section>
@@ -99,7 +106,7 @@ export default function TeamWorkshopsPage() {
             <h2 className="section_header decoration-secondary">Formats</h2>
             <ul className="mt-8 grid gap-4 md:grid-cols-2 text-lg">
               {formats.map((format) => (
-                <li key={format} className="border-l-4 border-secondary px-5 py-3">
+                <li key={format} className="border-l-5 border-secondary px-6 py-5">
                   {format}
                 </li>
               ))}

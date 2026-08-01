@@ -1,4 +1,5 @@
-import { ServicePageHero } from "@/components";
+import { ServiceImageFrame, ServicePageHero } from "@/components";
+import { services } from "@/lib/data";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -30,42 +31,48 @@ export default function EmergingLeadersPage() {
       />
       <main className="bg-light text-primary">
         <section className="py-20 md:py-24">
-          <div className="container max-w-5xl">
-            <div className="max-w-3xl text-lg leading-8">
-              <h2 className="text-3xl font-semibold mb-4">The Honest Bit</h2>
-              <p>
-                The step from doing the work to leading the people doing the
-                work is the biggest one in most careers, and it&apos;s the one
-                organisations most often leave to chance. You get a title, a
-                calendar full of meetings, and a quiet expectation that you&apos;ll
-                work out the rest.
-              </p>
-              <p>
-                This coaching is about shortening that. We work on what the role
-                actually asks for and nobody trains you in - renegotiating
-                relationships with people who were your peers last month,
-                handing over real work without hovering or disappearing, giving
-                feedback that lands, setting expectations and then holding them
-                when someone doesn&apos;t meet them.
-              </p>
-              <p>
-                Underneath all of it sits confidence. The real kind, not the
-                performed kind. There&apos;s a difference between being settled
-                and being very good at looking settled, and the second one is
-                exhausting. Most new leaders are carrying more doubt than they
-                let on, and naming it out loud with someone tends to take a
-                surprising amount of weight off.
-              </p>
-              <p>
-                We&apos;ll also spend time on what kind of leader you&apos;re going
-                to be. Not a values poster - a specific, honest answer to what
-                people can count on from you, and whether your behaviour on a
-                bad day matches it.
-              </p>
-              <p>
-                Available one-on-one, or as a group program for a cohort of
-                leaders inside the same organisation.
-              </p>
+          <div className="container max-w-6xl">
+            <div className="group lg:grid lg:grid-cols-2 lg:gap-x-12 lg:items-center">
+              <div className="max-w-3xl text-lg leading-8">
+                <h2 className="text-3xl font-semibold mb-4">The Honest Bit</h2>
+                <p>
+                  The step from doing the work to leading the people doing the
+                  work is the biggest one in most careers, and it&apos;s the one
+                  organisations most often leave to chance. You get a title, a
+                  calendar full of meetings, and a quiet expectation that you&apos;ll
+                  work out the rest.
+                </p>
+                <p>
+                  This coaching is about shortening that. We work on what the role
+                  actually asks for and nobody trains you in - renegotiating
+                  relationships with people who were your peers last month,
+                  handing over real work without hovering or disappearing, giving
+                  feedback that lands, setting expectations and then holding them
+                  when someone doesn&apos;t meet them.
+                </p>
+                <p>
+                  Underneath all of it sits confidence. The real kind, not the
+                  performed kind. There&apos;s a difference between being settled
+                  and being very good at looking settled, and the second one is
+                  exhausting. Most new leaders are carrying more doubt than they
+                  let on, and naming it out loud with someone tends to take a
+                  surprising amount of weight off.
+                </p>
+                <p>
+                  We&apos;ll also spend time on what kind of leader you&apos;re going
+                  to be. Not a values poster - a specific, honest answer to what
+                  people can count on from you, and whether your behaviour on a
+                  bad day matches it.
+                </p>
+                <p>
+                  Available one-on-one, or as a group program for a cohort of
+                  leaders inside the same organisation.
+                </p>
+              </div>
+              <ServiceImageFrame
+                src={services[1].image.src}
+                alt={services[1].image.alt}
+              />
             </div>
           </div>
         </section>
@@ -99,7 +106,7 @@ export default function EmergingLeadersPage() {
             </h2>
             <ul className="mt-8 grid gap-4 md:grid-cols-2 text-lg">
               {outcomes.map((outcome) => (
-                <li key={outcome} className="border-l-4 border-secondary px-5 py-3">
+                <li key={outcome} className="border-l-5 border-secondary px-6 py-5">
                   {outcome}
                 </li>
               ))}

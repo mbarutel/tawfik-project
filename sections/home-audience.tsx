@@ -10,17 +10,19 @@ export default function HomeAudience() {
   return (
     <section className="bg-light text-primary py-20 md:py-24">
       <div className="container max-w-5xl">
-        <h2 className="section_header decoration-secondary text-center">
+        <h2 className="section_header decoration-secondary mb-8 text-center">
           Who This Is For
         </h2>
-        <p className="text-center mt-6 mb-8">
+        <p className="text-center max-w-2xl mx-auto">
           The work fits well if you&apos;re:
         </p>
-        <ul className="grid gap-4 md:grid-cols-2 md:gap-5">
-          {audiences.map((audience) => (
+        <ul className="grid gap-4 md:grid-cols-2 md:gap-5 mt-8">
+          {audiences.map((audience, index) => (
             <li
               key={audience}
-              className="border-l-4 border-secondary px-5 py-5 text-lg leading-7"
+              className={`border-l-5 border-secondary px-6 py-6 text-lg leading-7 ${
+                index === audiences.length - 1 ? "md:col-span-2" : ""
+              }`}
             >
               {audience}
             </li>
