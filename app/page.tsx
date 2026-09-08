@@ -2,6 +2,7 @@ import { Header } from "@/components";
 import {
   HomeAbout,
   HomeServices,
+  HomeGroundedAudience,
   HomeQuotes,
   HomeCta,
   // HomeResources,
@@ -14,6 +15,7 @@ export default async function Home() {
       <Header />
       <HomeAbout />
       <HomeServices />
+      <HomeGroundedAudience />
       <HomeQuotes />
       <HomeCta />
       {/* <HomeResources /> */}

@@ -11,9 +11,8 @@ export default function Footer() {
             <Logo />
           </div>
           <p className="leading-tight max-w-[60ch]">
-            Great leadership doesn’t happen by chance, it’s an investment with
-            lasting impact. Explore how executive coaching and consulting can
-            make the difference.
+            Good leadership isn&apos;t luck. It&apos;s practice, feedback and the
+            right tools. It&apos;s worth investing in. See how coaching can help.
           </p>
         </div>
         <div>

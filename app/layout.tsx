@@ -10,31 +10,31 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Tawfik Executive Coaching & Consulting | Melbourne Leadership Development",
+  title: "Tawfik Executive Coaching | Melbourne Leadership Development",
   description:
-    "Tawfik Executive Coaching & Consulting empowers leaders and executives across Melbourne and Australia with tailored coaching, leadership development, and strategic consulting for lasting success.",
+    "Executive coaching and team workshops for new and emerging leaders. Practical, evidence-based leadership development across Melbourne, Gippsland and Australia.",
   keywords: [
     "executive coaching Melbourne",
-    "leadership coaching",
-    "business consulting Melbourne",
-    "executive development",
-    "leadership training",
-    "people and culture consulting",
+    "leadership coaching Victoria",
+    "coaching for new managers",
+    "emerging leader coaching Australia",
+    "leadership team workshops",
+    "psychological safety workshop",
   ],
   openGraph: {
-    title: "Tawfik Executive Coaching & Consulting",
+    title: "Tawfik Executive Coaching",
     description:
-      "Empowering leaders and executives in Melbourne with tailored coaching, leadership development, and strategic consulting.",
+      "Executive coaching and team workshops for new and emerging leaders across Melbourne, Gippsland and Australia.",
     url: "https://tawfikecc.com.au",
-    siteName: "Tawfik Executive Coaching & Consulting",
+   siteName: "Tawfik Executive Coaching",
     locale: "en_AU",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tawfik Executive Coaching & Consulting",
-    description:
-      "Melbourne's premier executive coaching and leadership consulting service.",
+   title: "Tawfik Executive Coaching",
+   description:
+      "Practical, evidence-based leadership development through executive coaching and team workshops.",
   },
   robots: {
     index: true,

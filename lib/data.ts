@@ -35,27 +35,30 @@ export const services = [
       alt: "Executive coaching session in Melbourne helping leaders enhance leadership skills",
     },
     title: "Executive Coaching",
-    subTitle: "Leadership & Performance Coaching",
-    text: "One-on-one coaching to support leaders in strengthening their leadership, enhancing performance, and navigating complex challenges with confidence.",
+    subTitle: "Leading with Clarity",
+    text: "One-on-one coaching for leaders carrying real weight. A confidential space to think clearly, test decisions, and lead with more presence and less second-guessing.",
+    link: "/services/executive-coaching",
   },
   {
     image: {
       src: "/services-two.webp",
-      alt: "People and culture consulting to improve organisational strategy and workplace dynamics",
+      alt: "Leadership workshop building team trust, alignment and capability",
     },
-    title: "Workshops",
-    subTitle: "Leadership Development Programs",
+    title: "Emerging & New Leaders",
+    subTitle: "Making the Step-up Stick",
 
-    text: "Engaging, practical leadership development programs designed to build capability, foster growth, and equip teams with tools that last.",
+    text: "Structured coaching for people early in their leadership. Build the habits, language and confidence the role asks for before the pressure finds the gaps.",
+    link: "/services/emerging-leaders",
   },
   {
     image: {
       src: "/services-three.webp",
-      alt: "Psychology-based coaching using behavioural insights for leadership and team success",
+      alt: "Coaching for new and emerging leaders in Melbourne and regional Victoria",
     },
-    title: "Consulting",
-    subTitle: "Strategic Advisory Services",
-    text: "Tailored strategic advisory services to help organisations align leadership, culture, and strategy for long-term impact.",
+    title: "Team Workshops",
+    subTitle: "Teams That Work Well Together",
+    text: "Practical sessions on trust, values, alignment and how a team actually performs. Designed around your team and what's really going on in it, not pulled off a shelf.",
+    link: "/services/team-workshops",
   },
 ] as const;
 
@@ -133,7 +136,7 @@ export const socials = [
 //       field: "Psychology",
 //     },
 //     {
-//       degree: "Institute of Organisation Coaching and Leadership",
+//       degree: "Institute of Executive Coaching and Leadership",
 //       field: "Organisation Coaching Certification Level 1 & 2",
 //     },
 //   ],

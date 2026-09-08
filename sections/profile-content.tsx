@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { FaEnvelope, FaGlobe, FaPhoneAlt } from "react-icons/fa";
-import { ImQuotesLeft } from "react-icons/im";
 import { IoSchoolSharp } from "react-icons/io5";
 import HomeCta from "./home-cta";
 
@@ -44,154 +43,55 @@ function TitleBanner() {
             MARCUS TAWFIK
           </h1>
           <h2 className="italic lg:text-lg mt-2 mb-4 text-center">
-            EXECUTIVE COACH SPECIALISING IN EARLY-STAGE LEADERSHIP DEVELOPMENT
+            Executive coach. Specialising in leaders in their first years of leadership.
           </h2>
-          <p className="text-center">
-            More than 15 years of Executive & Senior Leadership experience,
-            supported by established coaching practice.
+          <p className="text-center max-w-2xl mx-auto">
+            Grounded in evidence-based coaching practice, with more than 15
+            years of executive and senior leadership experience.
           </p>
           <div className="bg-light text-primary text-sm p-8 rounded-sm text-center">
-            <p>
-              As a Senior Leader and Executive Coach, I focus on{" "}
-              <span className="font-bold">enhancing leadership</span>{" "}
-              capabilities in their early stages. I collaborate with
-              organisations to cultivate{" "}
-              <span className="font-bold">confident and capable leaders</span>{" "}
-              during transitional periods, before performance, personnel, or
-              cultural challenges arise.
-            </p>
-            <p>
-              My approach emphasises early intervention, practical leadership
-              development, and equipping leaders with the necessary skills to
-              effectively guide their teams in complex environments.
-            </p>
-
-            <div className="mt-6">
-              <div className="grid md:grid-cols-4 text-center justify-center">
-                <div className="pt-2 border-r-2 border-secondary/80 hidden md:block">
-                  <h4 className="font-bold text-4xl">15+</h4>
-                  <p className="font-semibold">YEARS</p>
-                  <p>
-                    of executive & senior
-                    <br />
-                    leadership experience
-                  </p>
+            <div className="grid md:grid-cols-4 text-center justify-center">
+              <div className="pt-2 border-r-2 border-secondary/80 hidden md:block">
+                <h4 className="font-bold text-4xl">15+</h4>
+                <p className="font-semibold">YEARS</p>
+                <p>
+                  of executive & senior
+                  <br />
+                  leadership experience
+                </p>
+              </div>
+              <div className="pt-2 border-r-2 border-secondary/80 hidden md:block">
+                <IoSchoolSharp className="text-4xl mx-auto" />
+                <p className="font-semibold">BACHELOR</p>
+                <p>{">"} Community Welfare & Counselling</p>
+              </div>
+              <div className="pt-2 border-r-2 border-secondary/80 hidden md:block">
+                <IoSchoolSharp className="text-4xl mx-auto" />
+                <p className="font-semibold">BACHELOR</p>
+                <p>{">"} Psychology</p>
+              </div>
+              <div>
+                <div className="flex gap-3 justify-center">
+                  {accreditation.map((item, index) => (
+                    <div key={index} className="relative w-[60px] h-[60px]">
+                      <Image
+                        src={`/${item}`}
+                        alt="accreditation"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover"
+                      />
+                    </div>
+                  ))}
                 </div>
-                <div className="pt-2 border-r-2 border-secondary/80 hidden md:block">
-                  <IoSchoolSharp className="text-4xl mx-auto" />
-                  <p className="font-semibold">BACHELOR</p>
-                  <p>{">"} Community Welfare & Counselling</p>
-                </div>
-                <div className="pt-2 border-r-2 border-secondary/80 hidden md:block">
-                  <IoSchoolSharp className="text-4xl mx-auto" />
-                  <p className="font-semibold">BACHELOR</p>
-                  <p>{">"} Psychology</p>
-                </div>
-                <div>
-                  <div className="flex gap-3 justify-center">
-                    {accreditation.map((item, index) => (
-                      <div key={index} className="relative w-[60px] h-[60px]">
-                        <Image
-                          src={`/${item}`}
-                          alt="accreditation"
-                          fill
-                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                          className="object-cover"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                  <p className="font-semibold mt-1">COACHING CERTIFICATES</p>
-                  <p>
-                    {">"} Organisation Coaching
-                    <br />
-                    Level 1 & 2
-                  </p>
-                </div>
+                <p className="font-semibold mt-1">COACHING CERTIFICATES</p>
+                <p>
+                  {">"} Organisation Coaching
+                  <br />
+                  Level 1 & 2
+                </p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Quote() {
-  return (
-    <section>
-      <div className="container text-primary text-center">
-        <div className="bg-light p-6 xl:p-20 flex flex-col items-center montserrat ">
-          <ImQuotesLeft className="mb-6 text-2xl" />
-          <p className="!mb-8 last:mb-0 max-w-4xl">
-            As a Senior Leader and Executive Coach,
-            <br />I focus on{" "}
-            <span className="font-bold">enhancing leadership</span> capabilities
-            in their early stages. I collaborate with organisations to cultivate{" "}
-            <span className="font-bold">confident and capable leaders</span>{" "}
-            during transitional periods, before performance, personnel, or
-            cultural challenges arise.
-          </p>
-          <p className="max-w-4xl">
-            My approach emphasises early intervention, practical leadership
-            development, and equipping leaders with the necessary skills to
-            effectively guide their teams in complex environments.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Banners() {
-  const accreditation = [
-    "org-coaching-badge-cert-one.png",
-    "org-coaching-badge-cert-two.png",
-  ];
-
-  return (
-    <section>
-      <div>
-        <div className="grid grid-cols-4 text-center justify-center text-white py-16 px-10">
-          <div>
-            <h4 className="font-bold text-6xl">15+</h4>
-            <p className="font-semibold">YEARS</p>
-            <p>
-              of executive & senior
-              <br />
-              leadership experience
-            </p>
-          </div>
-          <div>
-            <IoSchoolSharp className="text-6xl mx-auto" />
-            <p className="font-semibold">BACHELOR</p>
-            <p>{">"} Community Welfare & Counselling</p>
-          </div>
-          <div>
-            <IoSchoolSharp className="text-6xl mx-auto" />
-            <p className="font-semibold">BACHELOR</p>
-            <p>{">"} Psychology</p>
-          </div>
-          <div>
-            <div className="flex gap-3 justify-center">
-              {accreditation.map((item, index) => (
-                <div key={index} className="relative w-[60px] h-[60px]">
-                  <Image
-                    src={`/${item}`}
-                    alt="accreditation"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-            <p className="font-semibold">COACHING CERTIFICATES</p>
-            <p>
-              {">"} Organisation Coaching
-              <br />
-              Level 1 & 2
-            </p>
           </div>
         </div>
       </div>
@@ -210,7 +110,7 @@ function EducationColumn() {
       text: "Psychology",
     },
     {
-      label: "Institute of Organisation Coaching and Leadership",
+      label: "Institute of Executive Coaching and Leadership",
       text: "Organisation Coaching Certification Level 1 & 2",
     },
   ];
@@ -258,45 +158,52 @@ function EducationColumn() {
   );
 }
 function ExperienceAndPracticeColoumn() {
-  const workingWith = [
-    "Strengthen confidence and presence",
-    "Expand self-understanding and judgement",
-    "Uncover capability through reflection and accountability",
-    "Turn new insight into everyday leadership behaviours",
-  ];
-
   return (
     <div className="text-primary p-6 flex flex-col max-w-4xl">
-      <h2 className="text-xl md:text-2xl lg:text-3xl mb-4 font-semibold">
-        EXPERIENCE & PRACTICE
-      </h2>
+        <h2 className="text-xl md:text-2xl lg:text-3xl mb-4 font-semibold">
+          A BIT ABOUT ME
+        </h2>
       <p>
-        I bring more than 15 years of executive and senior leadership
-        experience, supported by established coaching practice. My career has
-        involved leading large, multi‑disciplinary teams in demanding settings
-        where leaders must stay calm, make thoughtful choices, and guide others
-        with clarity.
+        I&apos;ve been lucky. Early in my career I worked in high-stakes
+        environments for leaders who could have just told me what to do and
+        didn&apos;t. They stretched me, coached me, and kept handing the question
+        back until I found the answer using what I already had. My whole
+        trajectory comes from that. This work is my way of passing it on, done
+        properly: grounded in evidence-based coaching practice rather than
+        instinct and good intentions.
       </p>
       <p>
-        My career has involved leading large, multidisciplinary teams in
-        demanding settings where leaders must stay calm, make thoughtful
-        choices, and guide others with clarity.
+        It took me a while to understand what leadership actually was. I
+        thought it was a title. Then I realised it&apos;s a set of capabilities
+        that either show up in everything you do, including the parts of your
+        life nobody&apos;s watching, or they don&apos;t.
       </p>
       <p>
-        My coaching approach draws on trusted frameworks and the belief that
-        leaders already possess significant strengths. My role is to support
-        clearer thinking, deeper insight, and behaviour change that lasts.
+        The thing I believe most: healthy organisations outperform smart ones
+        over time. And health gets built through trust, confidence and people
+        genuinely being happy and passionate about the work they do.
       </p>
-      <p>I work with growing and high potential leaders to:</p>
-      <ul className="pl-4 list-disc">
-        {workingWith.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
       <p>
-        This combination of hands-on leadership experience and proven coaching
-        helps leaders act with purpose and align their work with what matters
-        most.
+        If you sat down with me, you&apos;d hear me ask &quot;what&apos;s beneath the
+        surface here?&quot; more than once, usually right after you&apos;ve explained
+        the problem at length. It&apos;s not a trick. The first version of a
+        problem is rarely the real one.
+      </p>
+      <blockquote className="border-l-4 border-secondary pl-5 my-8 text-2xl italic">
+        What&apos;s beneath the surface here?
+      </blockquote>
+      <p>
+        Outside the work: I was born and raised in Gippsland. I&apos;ve travelled
+        a fair bit of Australia and the world, and it still feels like home.
+        Saturdays start with coffee, always, then go one of two ways - slow
+        with the family, or very fast, chasing my kids and the chocolate lab
+        around. I make music and hip-hop beats. Right now, I&apos;m reading Inner
+        Excellence by Jim Murphy and Strong Ground by Brené Brown.
+      </p>
+      <p>
+        If a client described me to a mate, I&apos;d want them to say I&apos;m
+        authentic - and that it&apos;s easy to sit in the grey area with me as
+        you&apos;ll feel safe the whole way.
       </p>
     </div>
   );

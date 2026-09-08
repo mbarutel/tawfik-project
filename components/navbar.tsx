@@ -19,7 +19,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex text-white text-lg montserrat">
+        <ul className="hidden md:flex text-white text-lg">
           {links.map((link, index) => (
             <li
               key={index}
